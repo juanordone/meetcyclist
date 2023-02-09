@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Tarjeta from "../../components/Tarjeta/Tarjeta";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   return (

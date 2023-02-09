@@ -1,4 +1,4 @@
-export default function Tarjeta() {
+export default function Tarjeta({ ciudad }) {
   return (
     <>
       <div className="col-lg-4 mb-4">
@@ -9,7 +9,7 @@ export default function Tarjeta() {
             className="card-img-top"
           />
           <div className="card-body">
-            <h5 className="card-title">Sunset</h5>
+            <h5 className="card-title">{ciudad}</h5>
             <p className="card-text"></p>
             <a href="" className="btn btn-outline-success btn-sm">
               Read More
