@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext/AuthContext";
+import SubirRuta from "../../views/SubirRuta/SubirRuta";
 
 export default function Navbar() {
   const { logout, authorization } = useAuthContext();
@@ -74,9 +75,9 @@ export default function Navbar() {
               </a>
               <ul className="dropdown-menu text-small">
                 <li>
-                  <a className="dropdown-item" href="#">
-                    New project...
-                  </a>
+                  <Link className="dropdown-item" to={"/subirRuta"}>
+                    Subir Ruta
+                  </Link>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
