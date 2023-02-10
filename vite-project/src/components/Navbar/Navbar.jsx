@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext/AuthContext";
 
 export default function Navbar() {
@@ -91,9 +92,9 @@ export default function Navbar() {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#" onClick={logout} to={"/"}>
+                  <Link className="dropdown-item"  onClick={logout} to={"/"}>
                     Sign out
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
