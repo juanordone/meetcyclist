@@ -1,4 +1,7 @@
+import { useAuthContext } from "../../AuthContext/AuthContext";
+
 export default function Navbar() {
+  const { logout, authorization } = useAuthContext();
   return (
     <>
       <header className="p-3 mb-3 border-bottom">
@@ -88,7 +91,7 @@ export default function Navbar() {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#" onClick={logout} to={"/"}>
                     Sign out
                   </a>
                 </li>

@@ -7,6 +7,7 @@ export default function Registro() {
     contraseña: "",
     nombre: "",
     apellidos: "",
+    apodo: ""
   });
 
   function handleInput(e) {
@@ -35,13 +36,23 @@ export default function Registro() {
         alert("usuario ya registrado");
       }
     });
-    setNuevoUsuario({ email: "", contraseña: "", nombre: "", apellidos: "" });
+    setNuevoUsuario({ email: "", contraseña: "", nombre: "", apellidos: "", apodo: ""});
   }
   return (
     <>
       <div className="container">
         <h3>Registro</h3>
         <form onSubmit={registro}>
+          <div className="form-group mt-5">
+            <input
+              type="text"
+              className="form-control"
+              name="apodo"
+              placeholder="apodo"
+              value={nuevoUsuario.apodo}
+              onChange={handleInput}
+            />
+          </div>
           <div className="form-group mt-5">
             <input
               type="text"
