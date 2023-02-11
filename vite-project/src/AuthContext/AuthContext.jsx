@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import jwt_decode from "jwt-decode"
 
 const AuthContext = createContext({
   authorization: null,
@@ -26,8 +27,11 @@ export function AuthContextProvider({ children }) {
 
     if (response.status === 200) {
       const token = await response.json();
-      setAuthorization(token.jwt);
-      window.localStorage.setItem(MY_AUTH_APP, token.jwt);
+      setAuthorization(jwt_decode(token.jwt));
+      window.localStorage.setItem(
+        MY_AUTH_APP,
+        JSON.stringify(jwt_decode(token.jwt))
+      );
       setErrorMessage(null);
     } else {
       setErrorMessage(alert("Error al introducir password o usuario"));

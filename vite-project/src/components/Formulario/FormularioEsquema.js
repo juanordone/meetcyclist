@@ -13,7 +13,7 @@ export const FormularioEsquema = yup.object().shape({
     .oneOf(["Solo ida", "Ida y vuelta", "Circular"], "tipo no valido")
     .required("Obligatorio"),
   duracion: yup.string().required("Obligatorio"),
-  fecha: yup.date().required("Obligatorio"),
+  fecha: yup.string().required("Obligatorio"),
   url: yup.string().required("Obligatorio"),
   detalles: yup.string(),
 });

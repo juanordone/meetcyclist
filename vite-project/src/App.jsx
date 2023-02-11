@@ -16,7 +16,7 @@ function App() {
             <Route index element={<Bienvenida />} />
             <Route path="iniciosesion" element={<InicioSesion />} />
             <Route path="home" element={<Home />} />
-            <Route path="subirRuta" element={<SubirRuta/>}/>
+            <Route path="subirRuta/:id" element={<SubirRuta/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
