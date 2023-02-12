@@ -75,18 +75,14 @@ export default function Navbar() {
               </a>
               <ul className="dropdown-menu text-small">
                 <li>
-                  <Link className="dropdown-item" to="subirRuta/:id">
+                  <Link className="dropdown-item" to="/subirRuta/:id">
                     Subir Ruta
                   </Link>
                 </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Settings
-                  </a>
-                </li>
+                
                 <li>
                   <Link className="dropdown-item" to="/perfil">
-                    Profile
+                    Perfil
                   </Link>
                 </li>
                 <li>
@@ -94,7 +90,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link className="dropdown-item"  onClick={logout} to={"/"}>
-                    Sign out
+                    Salir
                   </Link>
                 </li>
               </ul>

@@ -7,12 +7,12 @@ export default function FormularioUsuario() {
         <div className="card-body">
           <form>
             <div className="mb-3">
-              <label className="small mb-1" htmlFor="inputUsername">
+              <label className="small mb-1" htmlFor="apodo">
                 Apodo (Cómo aparecerá su nombre para otros usuarios en el sitio)
               </label>
               <input
                 className="form-control"
-                id="inputUsername"
+                id="apodo"
                 type="text"
                 placeholder="Apodo"
                 
