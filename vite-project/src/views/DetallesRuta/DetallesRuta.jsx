@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import TarjetaDetalles from "../../components/TarjetaDetalles/TarjetaDetalles";
 import {useEffect, useState} from "react"
 import {useParams} from "react-router-dom"
+import Comentarios from "../../components/Comentarios/Comentarios";
 
 export default function DetallesRuta({}){
     const {id} = useParams();
@@ -25,6 +26,7 @@ export default function DetallesRuta({}){
         <>
         <Navbar/>
         <TarjetaDetalles detallesRuta={detallesRuta}/>
+        <Comentarios/>
         </>
     )
 }

@@ -7,6 +7,7 @@ import Layout from "./components/Layout/Layout";
 import { AuthContextProvider } from "./AuthContext/AuthContext";
 import SubirRuta from "./views/SubirRuta/SubirRuta";
 import DetallesRuta from "./views/DetallesRuta/DetallesRuta";
+import DetallesUsuario from "./views/DetallesaUsuario/DetallesUsuario";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="subirRuta/:id" element={<SubirRuta/>}/>
             <Route path="detallesRuta/:id" element={<DetallesRuta/>}/>
+            <Route path="perfil" element={<DetallesUsuario/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
