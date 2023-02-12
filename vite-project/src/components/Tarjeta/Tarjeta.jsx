@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Tarjeta({ ciudad }) {
   return (
     <>
@@ -11,9 +13,9 @@ export default function Tarjeta({ ciudad }) {
           <div className="card-body">
             <h5 className="card-title">{ciudad}</h5>
             <p className="card-text"></p>
-            <a href="" className="btn btn-outline-success btn-sm">
+            <Link to={"/detallesRuta"} className="btn btn-outline-success btn-sm">
               Read More
-            </a>
+            </Link>
             <a href="" className="btn btn-outline-danger btn-sm">
               <i className="bi bi-heart"></i>
             </a>
