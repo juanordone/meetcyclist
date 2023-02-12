@@ -18,7 +18,7 @@ function App() {
             <Route path="iniciosesion" element={<InicioSesion />} />
             <Route path="home" element={<Home />} />
             <Route path="subirRuta/:id" element={<SubirRuta/>}/>
-            <Route path="detallesRuta" element={<DetallesRuta/>}/>
+            <Route path="detallesRuta/:id" element={<DetallesRuta/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
