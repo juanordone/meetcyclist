@@ -54,7 +54,7 @@ export default function Navbar() {
               </a>
               <ul className="dropdown-menu text-small">
                 <li>
-                  <Link className="dropdown-item" to="/subirRuta/:id">
+                  <Link className="dropdown-item" to={`/subirRuta/${authorization.id}`}>
                     Subir Ruta
                   </Link>
                 </li>

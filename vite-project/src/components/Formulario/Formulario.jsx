@@ -5,10 +5,10 @@ import { FormularioEsquema } from "./FormularioEsquema";
 import { initialValues } from "./utils/form";
 
 export default function Formulario() {
-  const {authorization} = useAuthContext
+  const {authorization} = useAuthContext()
   const params = useParams()
   async function onSubmit(values, actions) {
-    fetch(`http://localhost:3000/rutas/addRutas/${id} `, {
+    fetch(`http://localhost:3000/rutas/addRutas/${authorization.id} `, {
       method: "POST",
       headers: {
         "content-type": "application/json",
