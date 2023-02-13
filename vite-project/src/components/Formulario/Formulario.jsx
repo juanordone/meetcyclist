@@ -8,7 +8,7 @@ export default function Formulario() {
   const {authorization} = useAuthContext
   const params = useParams()
   async function onSubmit(values, actions) {
-    fetch(`http://localhost:3000/rutas/addRutas/${params.id} `, {
+    fetch(`http://localhost:3000/rutas/addRutas/${id} `, {
       method: "POST",
       headers: {
         "content-type": "application/json",
