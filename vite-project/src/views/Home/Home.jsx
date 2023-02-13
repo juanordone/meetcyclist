@@ -25,7 +25,7 @@ export default function Home() {
       <h1>ESTO ES LA HOME </h1>
       <div className="d-flex flex-wrap">
         {rutas.map((ruta) => (
-          <Tarjeta key={ruta.id} ciudad={ruta.ciudad} id={ruta.id}/>
+          <Tarjeta key={ruta.id} ciudad={ruta.ciudad} url={ruta.url} id={ruta.id}/>
         ))}
       </div>
     </>
