@@ -2,8 +2,34 @@ import "./FormularioUsuario.css";
 import { useFormik } from "formik";
 import { FormularioEsquemaUsuario } from "./FormularioEsquemaUsuario";
 import { initialValues } from "./utils/formUsuario";
+import { useAuthContext } from "../../AuthContext/AuthContext";
+import { useParams } from "react-router-dom";
 
 export default function FormularioUsuario() {
+  const {authorization} = useAuthContext()
+  const params = useParams()
+  async function onSubmit(values, actions) {
+    fetch(`http://localhost:3000/user/${authorization.id}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(values,authorization)
+    }).then((response)=> {
+      console.log(values);
+      if(response.status === 400){
+        alert("Error al recibir el body");
+      }else if(response.status === 200){
+        alert(`usuario ${values.apodo} cambiado correctamente`)
+      }else if (response.status === 409){
+        alert("");
+      }
+    });
+    console.log(values);
+    console.log(actions);
+    actions.resetForm();
+  }
+
   const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
     initialValues,
     validationSchema: FormularioEsquemaUsuario,
