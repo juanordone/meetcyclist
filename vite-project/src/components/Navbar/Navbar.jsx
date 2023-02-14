@@ -6,8 +6,8 @@ export default function Navbar() {
   const { logout, authorization } = useAuthContext();
   return (
     <>
-      <header className="p-3 mb-3 border-bottom  ">
-        <div className="container row justify-content-evenly">
+      <header className="navbar border-bottom  ">
+        <div className="container-fluid ">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
             <a
               href="/home"
@@ -26,12 +26,12 @@ export default function Navbar() {
             
 
             <form
-              className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"
+              className="d-flex"
               role="search"
             >
               <input
                 type="search"
-                className="form-control"
+                className="form-control me-2"
                 placeholder="Search..."
                 aria-label="Search"
               />
