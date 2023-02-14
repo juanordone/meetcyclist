@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="container row justify-content-evenly">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
             <a
-              href="/"
+              href="/home"
               className="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none fs-1"
             >
               Meet Cyclist
