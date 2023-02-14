@@ -11,11 +11,10 @@ export default function Tarjeta({ ciudad, id,url }) {
             <h5 className="card-title">{ciudad}</h5>
             <p className="card-text"></p>
             <Link to={`/detallesruta/${id}`} className="btn btn-outline-success btn-sm">
-              Read More
+              Leer más
             </Link>
-            <a href="" className="btn btn-outline-danger btn-sm">
-              <i className="bi bi-heart"></i>
-            </a>
+           
+            
           </div>
         </div>
       </div>
