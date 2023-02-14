@@ -14,7 +14,7 @@ export default function Home() {
         const response = await fetch("http://localhost:3000/rutas");
         const data = await response.json();
         setRutas(data);
-        
+        setError(null);
       } catch (error) {
         console.log(error);
       }
@@ -41,7 +41,7 @@ export default function Home() {
     }
   }, [rutaABuscar]);
 
-  
+
   return (
     <>
       <Navbar />
