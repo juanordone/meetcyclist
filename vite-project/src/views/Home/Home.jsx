@@ -40,12 +40,17 @@ export default function Home() {
       fetchData();
     }
   }, [rutaABuscar]);
+
+  
   return (
     <>
       <Navbar />
       <BarraBuscador
       rutaABuscar={rutaABuscar}
       setRutaABuscar={setRutaABuscar}/>
+      <p className="text-uppercase fs-1 fw-semibold text-center ">
+        {error}
+      </p>
       <div className="d-flex flex-wrap">
         {rutas.map((ruta) => (
           <Tarjeta key={ruta.id} ciudad={ruta.ciudad} url={ruta.url} id={ruta.id}/>
