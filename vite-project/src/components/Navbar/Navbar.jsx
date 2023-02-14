@@ -60,7 +60,7 @@ export default function Navbar() {
                 </li>
                 
                 <li>
-                  <Link className="dropdown-item" to="/perfil">
+                  <Link className="dropdown-item" to={`/perfil/${authorization.id}`}>
                     Perfil
                   </Link>
                 </li>

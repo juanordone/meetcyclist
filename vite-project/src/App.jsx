@@ -20,7 +20,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="subirRuta/:id" element={<SubirRuta/>}/>
             <Route path="detallesRuta/:id" element={<DetallesRuta/>}/>
-            <Route path="perfil" element={<DetallesUsuario/>}/>
+            <Route path="perfil/:id" element={<DetallesUsuario/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
