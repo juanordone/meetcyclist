@@ -25,17 +25,7 @@ export default function Navbar() {
 
             
 
-            <form
-              className="d-flex"
-              role="search"
-            >
-              <input
-                type="search"
-                className="form-control me-2"
-                placeholder="Search..."
-                aria-label="Search"
-              />
-            </form>
+            
 
             <div className="dropdown text-end">
               <a
