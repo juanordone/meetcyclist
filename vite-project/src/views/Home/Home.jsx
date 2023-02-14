@@ -1,9 +1,12 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Tarjeta from "../../components/Tarjeta/Tarjeta";
 import { useEffect, useState } from "react";
+import BarraBuscador from "../../components/BarraBuscador/BarraBuscador";
 
 export default function Home() {
   const [rutas, setRutas] = useState([]);
+  const [rutaABuscar, setRutaABuscar] = useState("");
+  const [error,setError] = useState("")
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,12 +20,32 @@ export default function Home() {
       }
       
     };
-    fetchData()
-  }, []);
+    const fetchRutaABuscar = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:3000/rutas/rutasName/${rutaABuscar}`
+        );
+        const data = await response.json();
+        setRutas(data);
+        setError(null);
+      } catch (error) {
+        console.log(error);
+        setError("La ruta no existe");
+        setRutas([]);
+      }
+    };
+    if (rutaABuscar !== "") {
+      fetchRutaABuscar();
+    } else {
+      fetchData();
+    }
+  }, [rutaABuscar]);
   return (
     <>
       <Navbar />
-      <h1>ESTO ES LA HOME </h1>
+      <BarraBuscador
+      rutaABuscar={rutaABuscar}
+      setRutaABuscar={setRutaABuscar}/>
       <div className="d-flex flex-wrap">
         {rutas.map((ruta) => (
           <Tarjeta key={ruta.id} ciudad={ruta.ciudad} url={ruta.url} id={ruta.id}/>
