@@ -7,7 +7,9 @@ import TarjetaPerfilUsuario from "../../components/TarjetaPerfilUsuario/TarjetaP
 
 export default function DetallesUsuario() {
 const {id} = useParams();
+
 const [detallesUsuario,setDetallesUsuario] = useState([]);
+const [rutasUsuario, setRutasUsuario] = useState([]);
 
 useEffect(() => {
   const fetchData = async () => {
@@ -15,6 +17,10 @@ useEffect(() => {
       const response = await fetch (`http://localhost:3000/user/user/${id}`);
       const data = await response.json();
       setDetallesUsuario(data);
+      const responseRutasUsuario = await fetch(`http://localhost:3000/rutas/rutaUsuario/${id}`);
+      const dataRutasUsuario = await responseRutasUsuario.json()
+      setRutasUsuario(dataRutasUsuario)
+     
     }catch(error){
       console.log(error);
     }
@@ -31,8 +37,8 @@ useEffect(() => {
 
         <FormularioUsuario />
       </div>
-      <div className="mt-5 ms-5">
-      <Tarjeta/>
+      <div className="mt-5 ms-5">{rutasUsuario.map((rutaUsuario) => (<Tarjeta key={rutaUsuario.id} url={rutaUsuario.url} ciudad={rutaUsuario.ciudad}/>))}
+      
       </div>
     </>
   );

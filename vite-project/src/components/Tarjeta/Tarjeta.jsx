@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Tarjeta({ ciudad, id,url }) {
+export default function Tarjeta({ ciudad, id,url, }) {
   return (
     <>
       <div className="col-lg-4 mb-4">
