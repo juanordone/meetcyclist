@@ -17,7 +17,7 @@ export default function Comentarios() {
               ></textarea>
               <div class="mar-top clearfix">
                 <button class="btn btn-sm btn-primary pull-right" type="submit">
-                  <i class="fa fa-pencil fa-fw"></i> Share
+                  <i class="fa fa-pencil fa-fw"></i> Publicar
                 </button>
               </div>
             </div>
