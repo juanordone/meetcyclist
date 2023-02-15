@@ -4,6 +4,7 @@ import { useAuthContext } from "../../AuthContext/AuthContext";
 
 export default function Navbar() {
   const { logout, authorization } = useAuthContext();
+  
   return (
     <>
       <header className="navbar border-bottom  ">
