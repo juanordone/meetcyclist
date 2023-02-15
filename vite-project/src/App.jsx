@@ -14,13 +14,14 @@ function App() {
     <AuthContextProvider>
       <BrowserRouter>
         <Routes>
+          <Route path="iniciosesion" element={<InicioSesion />} />
+          <Route index element={<Bienvenida />} />
+
           <Route path="/" element={<Layout />}>
-            <Route index element={<Bienvenida />} />
-            <Route path="iniciosesion" element={<InicioSesion />} />
             <Route path="home" element={<Home />} />
-            <Route path="subirRuta/:id" element={<SubirRuta/>}/>
-            <Route path="detallesRuta/:id" element={<DetallesRuta/>}/>
-            <Route path="perfil/:id" element={<DetallesUsuario/>}/>
+            <Route path="subirRuta/:id" element={<SubirRuta />} />
+            <Route path="detallesRuta/:id" element={<DetallesRuta />} />
+            <Route path="perfil/:id" element={<DetallesUsuario />} />
           </Route>
         </Routes>
       </BrowserRouter>

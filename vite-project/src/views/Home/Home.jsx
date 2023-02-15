@@ -6,7 +6,7 @@ import BarraBuscador from "../../components/BarraBuscador/BarraBuscador";
 export default function Home() {
   const [rutas, setRutas] = useState([]);
   const [rutaABuscar, setRutaABuscar] = useState("");
-  const [error,setError] = useState("")
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +18,6 @@ export default function Home() {
       } catch (error) {
         console.log(error);
       }
-      
     };
     const fetchRutaABuscar = async () => {
       try {
@@ -41,19 +40,21 @@ export default function Home() {
     }
   }, [rutaABuscar]);
 
-
   return (
     <>
-      <Navbar />
       <BarraBuscador
-      rutaABuscar={rutaABuscar}
-      setRutaABuscar={setRutaABuscar}/>
-      <p className="text-uppercase fs-1 fw-semibold text-center ">
-        {error}
-      </p>
+        rutaABuscar={rutaABuscar}
+        setRutaABuscar={setRutaABuscar}
+      />
+      <p className="text-uppercase fs-1 fw-semibold text-center ">{error}</p>
       <div className="d-flex flex-wrap">
         {rutas.map((ruta) => (
-          <Tarjeta key={ruta.id} ciudad={ruta.ciudad} url={ruta.url} id={ruta.id}/>
+          <Tarjeta
+            key={ruta.id}
+            ciudad={ruta.ciudad}
+            url={ruta.url}
+            id={ruta.id}
+          />
         ))}
       </div>
     </>

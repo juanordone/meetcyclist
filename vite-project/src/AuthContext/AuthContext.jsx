@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import jwt_decode from "jwt-decode"
+import jwt_decode from "jwt-decode";
 
 const AuthContext = createContext({
   authorization: null,
@@ -13,7 +13,7 @@ const MY_AUTH_APP = "MY_AUTH_APP";
 
 export function AuthContextProvider({ children }) {
   const [authorization, setAuthorization] = useState(
-    window.localStorage.getItem(MY_AUTH_APP) ?? null
+    JSON.parse(window.localStorage.getItem(MY_AUTH_APP)) ?? null
   );
   const [errorMessage, setErrorMessage] = useState(null);
 

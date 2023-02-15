@@ -24,7 +24,6 @@ export default function DetallesRuta({}) {
 
   return (
     <>
-      <Navbar />
       <TarjetaDetalles detallesRuta={detallesRuta} />
       <Comentarios />
       <TarjertaComentario />
