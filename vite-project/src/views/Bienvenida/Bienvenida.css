@@ -1,6 +1,23 @@
+#titulo{
+    font-size: 110px;
+    color: rgb(216, 106, 32);
+
+    
+  }  
+
+#meet{
+    font-size: 50px;
+    color: rgb(216, 106, 32);
+    font-weight: 500;
+}
+
+
+
+
 .imgFondo{ background-image:  url(../../../bienvenida.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 1000px;};
+
 

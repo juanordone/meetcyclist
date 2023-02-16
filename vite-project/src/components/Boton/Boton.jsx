@@ -1,6 +1,8 @@
+import "./Boton.css"
+
 export default function Boton({ to, campo }) {
   return (
-    <a href={`${to}`} type="button" className="btn btn-success ">
+    <a href={`${to}`} type="button" className="btn  " id="botoninicio">
       {campo}
     </a>
   );
