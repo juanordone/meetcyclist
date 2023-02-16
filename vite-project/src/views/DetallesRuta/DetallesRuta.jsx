@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar/Navbar";
+
 import TarjetaDetalles from "../../components/TarjetaDetalles/TarjetaDetalles";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
