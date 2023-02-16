@@ -1,6 +1,7 @@
 #titulo{
     font-size: 110px;
     color: rgb(216, 106, 32);
+    font-family: "Roboto";
 
     
   }  
@@ -9,6 +10,7 @@
     font-size: 50px;
     color: rgb(216, 106, 32);
     font-weight: 500;
+    font-family: "Roboto";
 }
 
 
