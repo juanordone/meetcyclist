@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import FormularioUsuario from "../../components/FormularioUsuario/FormularioUsuario";
-import Navbar from "../../components/Navbar/Navbar";
 import Tarjeta from "../../components/Tarjeta/Tarjeta";
 import TarjetaPerfilUsuario from "../../components/TarjetaPerfilUsuario/TarjetaPerfilUsuario";
 

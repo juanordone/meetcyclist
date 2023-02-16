@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar/Navbar";
+
 import Tarjeta from "../../components/Tarjeta/Tarjeta";
 import { useEffect, useState } from "react";
 import BarraBuscador from "../../components/BarraBuscador/BarraBuscador";

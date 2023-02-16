@@ -1,4 +1,4 @@
-export default function TarjertaComentario() {
+export default function TarjertaComentario({ Comentarios, apodo }) {
   return (
     <>
       <div className="panel">
@@ -13,16 +13,11 @@ export default function TarjertaComentario() {
             </a>
             <div className="media-body">
               <div className="mar-btm">
-                <a
-                  href="#"
-                  className="btn-link text-semibold media-heading box-inline"
-                >
-                  Lisa D.
-                </a>
+                <h5>{apodo}</h5>
                 <p className="text-muted text-sm"> 11 min ago</p>
               </div>
             </div>
-            <p>me encanta esta ruta</p>
+            <p>{Comentarios}</p>
           </div>
         </div>
       </div>
