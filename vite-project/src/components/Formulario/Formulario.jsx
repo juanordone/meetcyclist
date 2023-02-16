@@ -146,7 +146,7 @@ export default function Formulario() {
               Fecha
             </label>
             <input
-              type="text"
+              type="date"
               className="form-control"
               placeholder="00/00/00"
               name="fecha"

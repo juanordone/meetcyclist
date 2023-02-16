@@ -22,6 +22,8 @@ export default function TarjetaPerfilUsuario({detallesUsuario}) {
               <button className="btn btn-primary" type="button">
                Subir nueva imagen
               </button>
+              <input type="file"/>
+              
             </div>
             <h6 className="ps-3"> Nombre: {detallesUsuario.nombre} </h6>
             <h6 className="ps-3">Apellidos: {detallesUsuario.apellidos}</h6>
