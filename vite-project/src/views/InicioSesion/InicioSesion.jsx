@@ -8,10 +8,10 @@ export default function InicioSesion() {
         <div className="container text-center  ">
           <div className="row align-items-center">
             <div className="row justify-content-center">
-              <div className="col-6">
+              <div className="col-4 mt-5" id="login">
                 <Login />
               </div>
-              <div className="col-6">
+              <div className="col-4 mt-5" id="login">
                 <Registro />
               </div>
             </div>

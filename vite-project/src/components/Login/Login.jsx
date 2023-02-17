@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext/AuthContext";
-
+import "./Login.css"
 export default function Login() {
   const { login, authorization } = useAuthContext();
   const navigate = useNavigate();
@@ -23,8 +23,8 @@ export default function Login() {
 
   return (
     <>
-      <div className="  mt-5 ">
-        <h3>Iniciar Sesion</h3>
+      <div className="  mt-5 me-5 ">
+        <h3 className="titulo">Iniciar Sesion</h3>
         <form onSubmit={(e) => login(e, user)}>
           <div className="form-group ">
             <input
@@ -47,12 +47,10 @@ export default function Login() {
             />
           </div>
           <div className="form-group ">
-            <button type="submit" className="btn btn-dark mt-5">
+            <button id="iniciosesion" type="submit" className="btn btn-lg mt-5 col-6 ">
               Login
             </button>
-            <a href="#" className="btn mt-5">
-              Forget Password?
-            </a>
+            
           </div>
         </form>
       </div>

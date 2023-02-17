@@ -1,5 +1,11 @@
+#login{
+    background-color: rgba(231, 225, 223, 0.5);
+   
+  }  
+
 .imgFondoLogin{ background-image:  url(../../../iniciosesion.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 1000px;};
+

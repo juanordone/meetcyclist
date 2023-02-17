@@ -1,0 +1,11 @@
+.titulo{
+     color: rgb(251, 82, 0);
+     
+}
+#iniciosesion{
+    background-color: rgb(251, 82, 0) ;
+    color: aliceblue;
+    transition: background-color .1s;
+    
+    
+}

@@ -47,9 +47,9 @@ export default function Footer() {
         </div>
 
         <div className="text-center text-dark p-3">
-          © 2020 Copyright:
+          © 2023 Copyright:
           <a className="text-dark" href="https://mdbootstrap.com/">
-            MDBootstrap.com
+            MeetCyclist
           </a>
         </div>
       </footer>

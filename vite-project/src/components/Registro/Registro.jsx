@@ -40,8 +40,8 @@ export default function Registro() {
   }
   return (
     <>
-      <div className="mt-5">
-        <h3>Registro</h3>
+      <div className="mt-5 ms-5">
+        <h3 className="titulo">Registro</h3>
         <form onSubmit={registro}>
           <div className="form-group mt-5">
             <input
@@ -96,7 +96,7 @@ export default function Registro() {
             />
           </div>
           <div className="form-group">
-            <input type="submit" className="btn btn-primary mt-5" />
+            <input type="submit" className="btn btn-lg mt-5 col-6"  id="iniciosesion" />
           </div>
           <div className="form-check text-light mt-3">
             <input
@@ -106,7 +106,7 @@ export default function Registro() {
               id="flexCheckDefault"
               required
             />
-            <label className="form-check-label" htmlFor="flexCheckDefault">
+            <label className="form-check-label text-black fw-bolder fs-5" htmlFor="flexCheckDefault">
               Acepto la politica de privacidad
             </label>
           </div>
