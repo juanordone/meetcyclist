@@ -9,6 +9,7 @@ export default function Bienvenida() {
     <>
       <div className="imgFondo d-flex align-content-center justify-content-center flex-wrap ">
         <div className="position-absolute top-0 start-0 mt-3 ms-5 " id="meet">
+          
           Meet Cyclist
         </div>
         <div>
