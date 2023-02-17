@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext/AuthContext";
+import "./Navbar.css"
 
 export default function Navbar() {
   
@@ -26,11 +27,11 @@ export default function Navbar() {
   return (
     <>
       <header className="navbar border-bottom  ">
-        <div className="container-fluid ">
-          <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
-            <a
+        <div className="container ">
+          <div>
+            <a 
               href="/home"
-              className="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none fs-1"
+              className="d-flex align-items-center mb-2 mb-lg-0  text-decoration-none  fs-1 titulonavbar"
             >
               Meet Cyclist
               <svg
@@ -41,8 +42,9 @@ export default function Navbar() {
                 aria-label="Bootstrap"
               ></svg>
             </a>
+            </div>
 
-            <div className="dropdown text-end">
+            <div className="dropdown   ">
               <p>{imagenUsuario.nombre}</p>
               <a
                 href="#"
@@ -86,7 +88,7 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
-          </div>
+          
         </div>
       </header>
     </>
