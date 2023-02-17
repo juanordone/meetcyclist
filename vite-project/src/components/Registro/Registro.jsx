@@ -40,7 +40,7 @@ export default function Registro() {
   }
   return (
     <>
-      <div className="container">
+      <div className="mt-5">
         <h3>Registro</h3>
         <form onSubmit={registro}>
           <div className="form-group mt-5">

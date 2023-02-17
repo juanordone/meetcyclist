@@ -23,10 +23,10 @@ export default function Login() {
 
   return (
     <>
-      <div className="container">
+      <div className="  mt-5 ">
         <h3>Iniciar Sesion</h3>
         <form onSubmit={(e) => login(e, user)}>
-          <div className="form-group">
+          <div className="form-group ">
             <input
               type="text"
               name="email"
@@ -46,7 +46,7 @@ export default function Login() {
               value={user.contraseña}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group ">
             <button type="submit" className="btn btn-dark mt-5">
               Login
             </button>
