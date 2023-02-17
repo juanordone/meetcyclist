@@ -1,9 +1,9 @@
-import "./TarjetaPerfilUsuario.css"
+import "./TarjetaPerfilUsuario.css";
 
-export default function TarjetaPerfilUsuario({detallesUsuario}) {
+export default function TarjetaPerfilUsuario({ detallesUsuario }) {
+  console.log(detallesUsuario);
   return (
     <>
-    
       <div className="row">
         <div className="col-xl-4">
           <div className="card mb-4 mb-xl-0">
@@ -11,7 +11,7 @@ export default function TarjetaPerfilUsuario({detallesUsuario}) {
             <div className="card-body text-center">
               <img
                 className="img-account-profile rounded-circle mb-2"
-                src="https://cdn-icons-png.flaticon.com/512/1499/1499944.png"
+                src={`http://localhost:3000/${detallesUsuario.imagen}`}
                 alt="avar"
               />
 
@@ -20,10 +20,9 @@ export default function TarjetaPerfilUsuario({detallesUsuario}) {
               </div>
 
               <button className="btn btn-primary" type="button">
-               Subir nueva imagen
+                Subir nueva imagen
               </button>
-              <input type="file"/>
-              
+              <input type="file" />
             </div>
             <h6 className="ps-3"> Nombre: {detallesUsuario.nombre} </h6>
             <h6 className="ps-3">Apellidos: {detallesUsuario.apellidos}</h6>
