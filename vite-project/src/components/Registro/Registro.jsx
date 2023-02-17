@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useAuthContext } from "../../AuthContext/AuthContext";
+import "./Registro.css"
 
 export default function Registro() {
   const [nuevoUsuario, setNuevoUsuario] = useState({
@@ -51,6 +52,7 @@ export default function Registro() {
               placeholder="apodo"
               value={nuevoUsuario.apodo}
               onChange={handleInput}
+              required
             />
           </div>
           <div className="form-group mt-5">
@@ -100,11 +102,12 @@ export default function Registro() {
           </div>
           <div className="form-check text-light mt-3">
             <input
-              className="form-check-input"
+              className="form-check-input "
               type="checkbox"
               value=""
               id="flexCheckDefault"
               required
+            
             />
             <label className="form-check-label text-black fw-bolder fs-5" htmlFor="flexCheckDefault">
               Acepto la politica de privacidad
