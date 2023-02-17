@@ -43,6 +43,7 @@ export default function Navbar() {
             </a>
 
             <div className="dropdown text-end">
+              <p>{imagenUsuario.nombre}</p>
               <a
                 href="#"
                 className="d-block link-dark text-decoration-none dropdown-toggle"
