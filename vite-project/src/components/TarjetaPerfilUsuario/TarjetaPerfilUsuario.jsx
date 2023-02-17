@@ -1,7 +1,7 @@
 import "./TarjetaPerfilUsuario.css";
 
 export default function TarjetaPerfilUsuario({ detallesUsuario }) {
-  console.log(detallesUsuario);
+
   return (
     <>
       <div className="row">
