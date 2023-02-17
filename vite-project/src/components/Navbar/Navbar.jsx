@@ -1,10 +1,28 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext/AuthContext";
 
-
 export default function Navbar() {
-  const { logout, authorization } = useAuthContext();
   
+ 
+  const { logout, authorization } = useAuthContext();
+  const [imagenUsuario, setImagenUsuario] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:3000/user/user/${authorization.id}`
+        );
+        const data = await response.json();
+        setImagenUsuario(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <header className="navbar border-bottom  ">
@@ -24,10 +42,6 @@ export default function Navbar() {
               ></svg>
             </a>
 
-            
-
-            
-
             <div className="dropdown text-end">
               <a
                 href="#"
@@ -36,7 +50,7 @@ export default function Navbar() {
                 aria-expanded="false"
               >
                 <img
-                  src="https://github.com/mdo.png"
+                  src={`http://localhost:3000/${imagenUsuario.imagen}`}
                   alt="mdo"
                   width="32"
                   height="32"
@@ -45,13 +59,19 @@ export default function Navbar() {
               </a>
               <ul className="dropdown-menu text-small">
                 <li>
-                  <Link className="dropdown-item" to={`/subirRuta/${authorization.id}`}>
+                  <Link
+                    className="dropdown-item"
+                    to={`/subirRuta/${authorization.id}`}
+                  >
                     Subir Ruta
                   </Link>
                 </li>
-                
+
                 <li>
-                  <Link className="dropdown-item" to={`/perfil/${authorization.id}`}>
+                  <Link
+                    className="dropdown-item"
+                    to={`/perfil/${authorization.id}`}
+                  >
                     Perfil
                   </Link>
                 </li>
@@ -59,7 +79,7 @@ export default function Navbar() {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <Link className="dropdown-item"  onClick={logout} to={"/"}>
+                  <Link className="dropdown-item" onClick={logout} to={"/"}>
                     Salir
                   </Link>
                 </li>
