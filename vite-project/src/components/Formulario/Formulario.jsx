@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext/AuthContext";
 import { FormularioEsquema } from "./FormularioEsquema";
 import { initialValues } from "./utils/form";
+import "./Formulario.css"
 
 export default function Formulario() {
   const { authorization } = useAuthContext();
@@ -45,7 +46,7 @@ export default function Formulario() {
   return (
     <>
       <div>
-        <h3>Subir ruta</h3>
+        <h3 className="tituloSubir">Sube tu ruta</h3>
         <form className="row g-3" onSubmit={handleSubmit}>
           <div className="form-group mt-5 col-md-6">
             <input
@@ -162,9 +163,9 @@ export default function Formulario() {
               id="detalles"
             />
           </div>
-          <div className="form-group">
-            <button type="submit" className="btn btn-primary mt-5">
-              subir ruta
+          <div className="form-group d-grid gap-2 col-6 mx-auto">
+            <button type="submit" className=" botonsubirruta">
+              Subir Ruta
             </button>
           </div>
         </form>

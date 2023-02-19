@@ -1,0 +1,18 @@
+.botonsubirruta{
+    color: rgb(255, 255, 255);
+      background-color:rgb(251, 82, 0) ;
+      border-radius: 8px;
+      border: transparent;
+      padding: 10px;
+      transition: 0.5s;
+      
+      
+}
+.botonsubirruta:hover{
+    background-color:rgb(199, 66, 0) ;
+    
+}
+
+.tituloSubir{
+    color:rgb(251, 82, 0) ;
+}

@@ -1,9 +1,11 @@
+import "./Footer.css"
+
 export default function Footer() {
   return (
     <>
-      <footer className="text-center ">
+      <footer className="text-center mt-5 ">
         <div className="container pt-4">
-          <h3>Meet Cyclist</h3>
+          <h3 className="subeRuta">Meet Cyclist</h3>
           <div className="mb-4">
             <a
               className="btn btn-link btn-floating btn-lg text-dark m-1"
@@ -19,12 +21,7 @@ export default function Footer() {
               <i className="bi bi-twitter"></i>
             </a>
 
-            <a
-              className="btn btn-link btn-floating btn-lg text-dark m-1"
-              href="#!"
-            >
-              <i className="bi bi-google"></i>
-            </a>
+           
 
             <a
               className="btn btn-link btn-floating btn-lg text-dark m-1"
@@ -33,12 +30,7 @@ export default function Footer() {
               <i className="bi bi-instagram"></i>
             </a>
 
-            <a
-              className="btn btn-link btn-floating btn-lg text-dark m-1"
-              href="#!"
-            >
-              <i className="bi bi-linkedin"></i>
-            </a>
+          
 
             <a className="btn   btn-lg  m-1" href="#!">
               <i className="bi bi-github"></i>
