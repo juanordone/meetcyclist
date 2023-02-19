@@ -5,8 +5,8 @@ import { FormularioEsquema } from "./FormularioEsquema";
 import { initialValues } from "./utils/form";
 
 export default function Formulario() {
-  const {authorization} = useAuthContext()
-  const params = useParams()
+  const { authorization } = useAuthContext();
+  const params = useParams();
   async function onSubmit(values, actions) {
     fetch(`http://localhost:3000/rutas/addRutas/${authorization.id} `, {
       method: "POST",
@@ -32,7 +32,7 @@ export default function Formulario() {
   const {
     values,
     errors,
-   
+
     handleBlur,
     handleChange,
     handleSubmit,
@@ -44,13 +44,10 @@ export default function Formulario() {
 
   return (
     <>
-      <div className="container">
+      <div>
         <h3>Subir ruta</h3>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group mt-5">
-            <label htmlFor="ciudad" className="form-label">
-              Ciudad
-            </label>
+        <form className="row g-3" onSubmit={handleSubmit}>
+          <div className="form-group mt-5 col-md-6">
             <input
               value={values.ciudad}
               onChange={handleChange}
@@ -62,10 +59,7 @@ export default function Formulario() {
               id="ciudad"
             />
           </div>
-          <div className="form-group mt-5">
-            <label htmlFor="distancia" className="form-label">
-              Distancia
-            </label>
+          <div className="form-group mt-5 col-md-6">
             <input
               type="text"
               className="form-control"
@@ -78,10 +72,7 @@ export default function Formulario() {
             />
           </div>
 
-          <div className="form-group mt-5">
-            <label htmlFor="nivel" className="form-label">
-              Nivel
-            </label>
+          <div className="form-group mt-5 col-md-6 ">
             <select
               className="form-select"
               onChange={handleChange}
@@ -95,10 +86,7 @@ export default function Formulario() {
             </select>
           </div>
 
-          <div className="form-group mt-5">
-            <label htmlFor="velocidad" className="form-label">
-              Velocidad
-            </label>
+          <div className="form-group mt-5 col-md-6">
             <input
               type="text"
               className="form-control"
@@ -110,10 +98,7 @@ export default function Formulario() {
               id="velocidad"
             />
           </div>
-          <div className="form-group mt-5">
-            <label htmlFor="tipo" className="form-label">
-              tipo de ruta
-            </label>
+          <div className="form-group mt-5 col-md-6">
             <select
               className="form-select"
               onChange={handleChange}
@@ -126,10 +111,7 @@ export default function Formulario() {
               <option value="Circular">Circular</option>
             </select>
           </div>
-          <div className="form-group mt-5">
-            <label htmlFor="Nivel" className="form-label">
-              Duración
-            </label>
+          <div className="form-group mt-5 col-md-6">
             <input
               type="text"
               className="form-control"
@@ -141,10 +123,7 @@ export default function Formulario() {
               id="duracion"
             />
           </div>
-          <div className="form-group mt-5">
-            <label htmlFor="fecha" className="form-label">
-              Fecha
-            </label>
+          <div className="form-group mt-5 col-md-6">
             <input
               type="date"
               className="form-control"
@@ -156,10 +135,10 @@ export default function Formulario() {
               id="fecha"
             />
           </div>
+          <div className=" mt-5 col-md-6">
+            <img src="../../../rutaregistro.png" width={55} />
+          </div>
           <div className="form-group mt-5">
-            <label htmlFor="url" className="form-label">
-              URL
-            </label>
             <input
               type="text"
               className="form-control"
@@ -172,9 +151,6 @@ export default function Formulario() {
             />
           </div>
           <div className="form-group mt-5">
-            <label htmlFor="detalles" className="form-label">
-              Detalles
-            </label>
             <input
               type="text"
               className="form-control"
@@ -187,12 +163,12 @@ export default function Formulario() {
             />
           </div>
           <div className="form-group">
-            <button
-              type="submit"
-              className="btn btn-primary mt-5">subir ruta</button>
+            <button type="submit" className="btn btn-primary mt-5">
+              subir ruta
+            </button>
           </div>
         </form>
-        <pre>{JSON.stringify({values,errors})}</pre>
+       
       </div>
     </>
   );

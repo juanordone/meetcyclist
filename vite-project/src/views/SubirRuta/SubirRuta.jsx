@@ -1,10 +1,16 @@
 import Formulario from "../../components/Formulario/Formulario";
-import Navbar from "../../components/Navbar/Navbar";
+
 
 export default function SubirRuta() {
   return (
     <>
-      <Formulario />
+      <div className="container text-center">
+        <div className="row align-items-center">
+          <div className="col-6">
+            <Formulario />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
