@@ -2,7 +2,7 @@
     color: rgb(251, 82, 0);
 }
 
-.imgFondo{ background-image:  url(../../../registroRuta2.jpg);
+.imgFondoRuta{ background-image:  url(../../../registroRuta2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

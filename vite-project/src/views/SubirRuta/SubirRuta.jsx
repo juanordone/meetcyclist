@@ -6,7 +6,7 @@ import "./SubirRuta.css";
 export default function SubirRuta() {
   return (
     <>
-      <div className="imgFondo">
+      <div className="imgFondoRuta">
         <div className="container text-center  ">
           <div className="row align-items-center">
             <div className="col-6 mt-5">
