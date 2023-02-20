@@ -33,6 +33,7 @@ export default function Formulario() {
   const {
     values,
     errors,
+    touched,
 
     handleBlur,
     handleChange,
@@ -54,7 +55,11 @@ export default function Formulario() {
               onChange={handleChange}
               onBlur={handleBlur}
               type="text"
-              className="form-control"
+              className={
+                errors.ciudad && touched.ciudad
+                  ? "form-control is-invalid"
+                  : "form-control "
+              }
               name="ciudad"
               placeholder="Ciudad"
               id="ciudad"
@@ -63,7 +68,11 @@ export default function Formulario() {
           <div className="form-group mt-5 col-md-6">
             <input
               type="text"
-              className="form-control"
+              className={
+                errors.distancia && touched.distancia
+                  ? "form-control is-invalid"
+                  : "form-control "
+              }
               name="distancia"
               placeholder="Distancia"
               value={values.distancia}
@@ -75,7 +84,11 @@ export default function Formulario() {
 
           <div className="form-group mt-5 col-md-6 ">
             <select
-              className="form-select"
+              className={
+                errors.nivel && touched.nivel
+                  ? "form-select is-invalid"
+                  : "form-select "
+              }
               onChange={handleChange}
               onBlur={handleBlur}
               id="nivel"
@@ -90,7 +103,11 @@ export default function Formulario() {
           <div className="form-group mt-5 col-md-6">
             <input
               type="text"
-              className="form-control"
+              className={
+                errors.velocidad && touched.velocidad
+                  ? "form-control is-invalid"
+                  : " form-control"
+              }
               placeholder="Velocidad"
               name="velocidad"
               value={values.velocidad}
@@ -101,7 +118,11 @@ export default function Formulario() {
           </div>
           <div className="form-group mt-5 col-md-6">
             <select
-              className="form-select"
+              className={
+                errors.tipo && touched.tipo
+                  ? "form-select is-invalid"
+                  : "form-select "
+              }
               onChange={handleChange}
               onBlur={handleBlur}
               id="tipo"
@@ -115,7 +136,11 @@ export default function Formulario() {
           <div className="form-group mt-5 col-md-6">
             <input
               type="text"
-              className="form-control"
+              className={
+                errors.duracion && touched.duracion
+                  ? "form-control is-invalid"
+                  : " form-control"
+              }
               placeholder="duración aproximada"
               name="duracion"
               value={values.duracion}
@@ -127,7 +152,11 @@ export default function Formulario() {
           <div className="form-group mt-5 col-md-6">
             <input
               type="date"
-              className="form-control"
+              className={
+                errors.fecha && touched.fecha
+                  ? "form-select is-invalid"
+                  : "form-select "
+              }
               placeholder="00/00/00"
               name="fecha"
               value={values.fecha}
@@ -142,7 +171,11 @@ export default function Formulario() {
           <div className="form-group mt-5">
             <input
               type="text"
-              className="form-control"
+              className={
+                errors.url && touched.url
+                  ? "form-control is-invalid"
+                  : " form-control"
+              }
               placeholder="Url Google maps"
               name="url"
               value={values.url}
