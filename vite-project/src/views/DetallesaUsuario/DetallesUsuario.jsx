@@ -35,7 +35,7 @@ export default function DetallesUsuario() {
 
         <FormularioUsuario />
       </div>
-      <div className="mt-5 ms-5">
+      <div className="container d-flex flex-wrap justify-content-center">
         {rutasUsuario.map((rutaUsuario) => (
           <Tarjeta
             key={rutaUsuario.id}

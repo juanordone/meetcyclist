@@ -1,4 +1,3 @@
-
 import Tarjeta from "../../components/Tarjeta/Tarjeta";
 import { useEffect, useState } from "react";
 import BarraBuscador from "../../components/BarraBuscador/BarraBuscador";
@@ -47,7 +46,7 @@ export default function Home() {
         setRutaABuscar={setRutaABuscar}
       />
       <p className="text-uppercase fs-1 fw-semibold text-center ">{error}</p>
-      <div className="d-flex flex-wrap">
+      <div className="container d-flex flex-wrap justify-content-center">
         {rutas.map((ruta) => (
           <Tarjeta
             key={ruta.id}
