@@ -41,12 +41,15 @@ export default function Home() {
 
   return (
     <>
+    <div className="d-flex justify-content-center">
       <BarraBuscador
         rutaABuscar={rutaABuscar}
         setRutaABuscar={setRutaABuscar}
       />
+      </div>
       <p className="text-uppercase fs-1 fw-semibold text-center ">{error}</p>
-      <div className="container d-flex flex-wrap justify-content-center">
+      
+      <div className="container d-flex flex-wrap gap-5 justify-content-center">
         {rutas.map((ruta) => (
           <Tarjeta
             key={ruta.id}
