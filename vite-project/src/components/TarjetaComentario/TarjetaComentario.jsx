@@ -1,4 +1,4 @@
-export default function TarjertaComentario({ Comentarios, apodo }) {
+export default function TarjertaComentario({ Comentarios, apodo, imagen }) {
   return (
     <>
       <div className="panel">
@@ -8,7 +8,7 @@ export default function TarjertaComentario({ Comentarios, apodo }) {
               <img
                 className="img-circle img-sm"
                 alt="Profile Picture"
-                src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                src={`http://localhost:3000/${imagen}`}
               />
             </a>
             <div className="media-body">

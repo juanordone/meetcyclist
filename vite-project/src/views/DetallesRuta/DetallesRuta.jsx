@@ -30,17 +30,17 @@ export default function DetallesRuta({}) {
   return (
     <>
       <TarjetaDetalles detallesRuta={detallesRuta} />
-      <Comentarios/>
+      <Comentarios />
       <div>
         {comentariosRuta.map((comentarioUsuario) => (
-          <TarjertaComentario 
+          <TarjertaComentario
             key={comentarioUsuario.id}
             Comentarios={comentarioUsuario.comentario}
             apodo={comentarioUsuario.apodo}
-            />
+            imagen={comentarioUsuario.imagen}
+          />
         ))}
       </div>
-      
     </>
   );
 }
