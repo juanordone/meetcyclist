@@ -4,8 +4,8 @@ export default function Tarjeta({ ciudad, id, url }) {
   return (
     <>
       <div className=" mt-5">
-        <div className="col-10 mb-4">
-          <div className="card shadow-none">
+        <div className="col-11 mb-4">
+          <div className="card shadow-sm">
             <div
               className="card-img d-flex justify-content-center "
               dangerouslySetInnerHTML={{ __html: `${url}` }}
