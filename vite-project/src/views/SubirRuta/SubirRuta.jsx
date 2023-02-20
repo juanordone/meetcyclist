@@ -15,8 +15,10 @@ export default function SubirRuta() {
             <div className="col-6">
               <ReactPlayer
                 className="react-player "
-                url="../../../tutorial.mp4"
+                url="../../../videosubirruta.mp4"
                 controls
+                playing
+                
               />
             </div>
           </div>
