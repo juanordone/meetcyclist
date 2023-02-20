@@ -1,6 +1,7 @@
 import Tarjeta from "../../components/Tarjeta/Tarjeta";
 import { useEffect, useState } from "react";
 import BarraBuscador from "../../components/BarraBuscador/BarraBuscador";
+import "./Home.css"
 
 export default function Home() {
   const [rutas, setRutas] = useState([]);
@@ -28,7 +29,7 @@ export default function Home() {
         setError(null);
       } catch (error) {
         console.log(error);
-        setError("La ruta no existe");
+        setError("Busca otro lugar donde pedalear");
         setRutas([]);
       }
     };
@@ -47,7 +48,7 @@ export default function Home() {
         setRutaABuscar={setRutaABuscar}
       />
       </div>
-      <p className="text-uppercase fs-1 fw-semibold text-center ">{error}</p>
+      <p className="text-uppercase fs-1 fw-semibold text-center mt-5 noruta ">{error}</p>
       
       <div className="container d-flex flex-wrap gap-5 justify-content-center">
         {rutas.map((ruta) => (
