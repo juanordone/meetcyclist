@@ -42,6 +42,7 @@ export default function Home() {
 
   return (
     <>
+    <div className="colorhome">
     <div className="d-flex justify-content-center">
       <BarraBuscador
         rutaABuscar={rutaABuscar}
@@ -57,8 +58,10 @@ export default function Home() {
             ciudad={ruta.ciudad}
             url={ruta.url}
             id={ruta.id}
+            fecha={ruta.fecha}
           />
         ))}
+      </div>
       </div>
     </>
   );
