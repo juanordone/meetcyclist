@@ -34,9 +34,8 @@ export default function TarjetaPerfilUsuario({ detallesUsuario }) {
   });
   return (
     <>
-      <div className="row">
-        <div className="col-xl-4">
-          <div className="card mb-4 mb-xl-0">
+      
+          <div className="card mb-4  mt-5">
             <div className="card-header">Perfil de {detallesUsuario.apodo}</div>
             <div className="card-body text-center">
               <img
@@ -67,8 +66,7 @@ export default function TarjetaPerfilUsuario({ detallesUsuario }) {
             <h6 className="ps-3">Apellidos: {detallesUsuario.apellidos}</h6>
             <h6 className="ps-3">email: {detallesUsuario.email}</h6>
           </div>
-        </div>
-      </div>
+       
     </>
   );
 }

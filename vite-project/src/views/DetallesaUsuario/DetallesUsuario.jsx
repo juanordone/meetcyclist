@@ -30,10 +30,13 @@ export default function DetallesUsuario() {
 
   return (
     <>
-      <div className="container-xl px-4 mt-4">
+    <div className=" d-flex justify-content-evenly ">
+      
         <TarjetaPerfilUsuario detallesUsuario={detallesUsuario} />
-
+      
+     
         <FormularioUsuario />
+      
       </div>
       <div className="container d-flex flex-wrap justify-content-center">
         {rutasUsuario.map((rutaUsuario) => (

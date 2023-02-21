@@ -37,8 +37,7 @@ export default function FormularioUsuario() {
   });
   return (
     <>
-      <div className="col-xl-8">
-        <div className="card-body">
+     <div className="mt-5">
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label className="small mb-1" htmlFor="apodo">
@@ -110,8 +109,8 @@ export default function FormularioUsuario() {
               Guardar cambios
             </button>
           </form>
-        </div>
-      </div>
+          </div>
+        
     </>
   );
 }
