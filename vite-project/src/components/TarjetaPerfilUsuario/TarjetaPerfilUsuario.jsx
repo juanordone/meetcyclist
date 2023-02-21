@@ -41,26 +41,34 @@ export default function TarjetaPerfilUsuario({ detallesUsuario }) {
               <img
                 className="img-account-profile rounded-circle mb-2"
                 src={`http://localhost:3000/${detallesUsuario.imagen}`}
-                alt="avar"
+                alt="avatar"
               />
 
               <div className="small font-italic text-muted mb-4">
                 JPG o PNG no mas de 5MB
               </div>
+              <div className="form-group mt-5 col-md-6">
               <form onSubmit={handleSubmit}>
+                <div className="form-group">
                 
                 <input
+               
                   onChange={(e)=> setFieldValue("imagen",e.target.files[0])}
                   onBlur={handleBlur}
                   name="imagen"
                   id="imagen"
                   value={undefined}
                   type="file"
+                  
                 />
-                <button className="btn btn-primary" type="submit">
-                  Subir nueva imagen
+                </div>
+                <div className="form-group">
+                <button className="btn btn-primary mt-3 " type="submit">
+                  Subir imagen
                 </button>
+                </div>
               </form>
+              </div>
             </div>
             <h6 className="ps-3"> Nombre: {detallesUsuario.nombre} </h6>
             <h6 className="ps-3">Apellidos: {detallesUsuario.apellidos}</h6>
