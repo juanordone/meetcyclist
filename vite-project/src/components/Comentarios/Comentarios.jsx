@@ -55,7 +55,7 @@ export default function Comentarios() {
                   onBlur={handleBlur}
                   className="form-control"
                   rows="2"
-                  placeholder="Que quieres saber?"
+                  placeholder="Para mas información sobre la ruta escribe aquí  y el creador te respondera lo mas rapido posible . . ."
                 ></textarea>
                 <div className="mar-top clearfix">
                   <button
