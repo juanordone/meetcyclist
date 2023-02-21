@@ -1,7 +1,7 @@
 export default function TarjertaComentario({ Comentarios, apodo, imagen }) {
   return (
     <>
-      <div className="panel">
+      <div className="panel container">
         <div className="panel-body">
           <div className="media-block">
             <a className="media-left">

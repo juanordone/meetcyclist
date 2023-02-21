@@ -91,6 +91,8 @@
 
 .btn-sm, .btn-group-sm>.btn, .btn-icon.btn-sm {
     padding: 5px 10px !important;
+    background-color: rgb(251, 82, 0) !important
+     ;
 }
 
 .mar-top {

@@ -59,7 +59,7 @@ export default function Comentarios() {
                 ></textarea>
                 <div className="mar-top clearfix">
                   <button
-                    className="btn btn-sm btn-primary pull-right"
+                    className="btn btn-sm btn-primary border pull-right"
                     type="submit"
                   >
                     <i className="fa fa-pencil fa-fw"></i> Publicar
