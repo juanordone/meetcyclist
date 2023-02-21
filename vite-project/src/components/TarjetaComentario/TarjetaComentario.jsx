@@ -12,7 +12,7 @@ export default function TarjertaComentario({ Comentarios, apodo, imagen }) {
               />
             </a>
             <div className="media-body">
-              <div className="mar-btm ms-2">
+              <div className="mar-btm ms-3">
                 <h5>{apodo}</h5>
                 <p className="text-muted text-sm"> 11 min ago</p>
               </div>
