@@ -22,3 +22,44 @@
     
 
 }
+
+.botonPerfil{
+    color: rgb(255, 255, 255);
+    background-color:rgb(251, 82, 0) ;
+    border-radius: 8px;
+    border: transparent;
+    padding: 8px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+.botonPerfil:hover{
+    background-color:rgb(199, 66, 0) ;
+    color:  rgb(255, 255, 255);
+}
+
+.file-select {
+    position: relative;
+    display: inline-block;
+  }
+  
+.file-select::before {
+    background-color: rgb(251, 82, 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    content: 'Seleccionar archivo';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+.file-select input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+  }

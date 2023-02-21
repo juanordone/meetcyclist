@@ -30,10 +30,12 @@ export default function DetallesUsuario() {
 
   return (
     <>
-    <div className=" d-flex justify-content-evenly ">
+     <div className="colorhome">
+    <div className=" d-flex justify-content-evenly">
+      <div className="col-3">
       
         <TarjetaPerfilUsuario detallesUsuario={detallesUsuario} />
-      
+        </div>
      
         <FormularioUsuario />
       
@@ -46,6 +48,7 @@ export default function DetallesUsuario() {
             ciudad={rutaUsuario.ciudad}
           />
         ))}
+      </div>
       </div>
     </>
   );
