@@ -29,6 +29,7 @@ export default function DetallesRuta({}) {
 
   return (
     <>
+    <div className="colorhome">
       <TarjetaDetalles detallesRuta={detallesRuta} />
       <Comentarios />
       <div>
@@ -40,6 +41,7 @@ export default function DetallesRuta({}) {
             imagen={comentarioUsuario.imagen}
           />
         ))}
+      </div>
       </div>
     </>
   );

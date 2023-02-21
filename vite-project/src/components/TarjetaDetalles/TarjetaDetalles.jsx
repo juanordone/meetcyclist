@@ -1,17 +1,18 @@
+import "./TarjetaDetalle.css"
 export default function TarjetaDetalles({ detallesRuta }) {
   return (
     <>
-      <div>
+      
         <div
-          className="d-flex align-items-center mb-5 mt-5 p-5"
+          className="container d-flex justify-content-around align-items-center"
           key={detallesRuta.id}
         >
-          <div className="flex-shrink-0">
-            <div dangerouslySetInnerHTML={{ __html: `${detallesRuta.url}` }} />
+          <div className="col-6 mt-5">
+            <div  dangerouslySetInnerHTML={{ __html: `${detallesRuta.url}` }} />
           </div>
 
-          <div className="flex-grow-1 ms-3">
-            <p className="fs-1 fw-bold text-center">{detallesRuta.ciudad}</p>
+          <div className="col-6 mt-5">
+            <p className="fs-1 fw-bold text-center ciudad ">{detallesRuta.ciudad}</p>
             <p className="fs-3 text-center">{detallesRuta.distancia}</p>
             <p className="fs-3 fw-bold  text-center">{detallesRuta.fecha}</p>
             <p className="fs-3 text-center">{detallesRuta.nivel}</p>
@@ -21,11 +22,11 @@ export default function TarjetaDetalles({ detallesRuta }) {
             <p className="fs-3 text-center">{detallesRuta.detalles}</p>
 
             <div className="d-grid gap-2 p-3">
-              <a className="btn btn-primary btn-lg">Unirse a ruta</a>
+              <button className="botonunir">Unirse a ruta</button>
             </div>
           </div>
         </div>
-      </div>
+      
     </>
   );
 }

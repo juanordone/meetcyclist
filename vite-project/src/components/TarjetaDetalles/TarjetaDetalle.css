@@ -1,0 +1,17 @@
+.ciudad{
+    color: rgb(251, 82, 0);
+}
+.botonunir{
+    color: rgb(255, 255, 255);
+    background-color:rgb(251, 82, 0) ;
+    border-radius: 8px;
+    border: transparent;
+    padding: 16px;
+    transition: 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+.botonunir:hover{
+    background-color:rgb(199, 66, 0) ;
+    color:  rgb(255, 255, 255);
+}
