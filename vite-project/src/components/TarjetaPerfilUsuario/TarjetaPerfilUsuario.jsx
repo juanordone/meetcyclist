@@ -1,7 +1,6 @@
 import { Formik, useFormik } from "formik";
 import { TarjetaEsquema } from "./TarjetaEsquema";
-import {useAuthContext} from "../../AuthContext/AuthContext"
-import { useParams } from "react-router-dom";
+
 import "./TarjetaPerfilUsuario.css";
 
 export default function TarjetaPerfilUsuario({ detallesUsuario }) {
