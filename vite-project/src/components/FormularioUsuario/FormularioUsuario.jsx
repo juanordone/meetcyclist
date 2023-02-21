@@ -105,7 +105,7 @@ export default function FormularioUsuario() {
               />
             </div>
 
-            <button className="btn btn-primary" type="submit">
+            <button className="botonperfilformulario" type="submit">
               Guardar cambios
             </button>
           </form>
