@@ -108,7 +108,7 @@ export default function TarjetaDetalles({ detallesRuta }) {
             <div className="">
               <p className="">{participantes.apodo}</p>
               <img
-                className="img-circle img-sm"
+                className="img-circle img-sm rounded-circle"
                 alt="Profile Picture"
                 src={`http://localhost:3000/${participantes.imagen}`}
               />
