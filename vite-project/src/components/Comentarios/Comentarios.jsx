@@ -42,7 +42,7 @@ export default function Comentarios() {
         rel="stylesheet"
       />
       <form onSubmit={handleSubmit}>
-        <div className="container bootdey">
+        <div className="container bootdey mt-5">
           <div className="col-md-12 bootstrap snippets">
             <div className="panel">
               <div className="panel-body">
