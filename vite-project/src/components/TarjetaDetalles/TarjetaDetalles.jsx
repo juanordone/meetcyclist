@@ -5,20 +5,22 @@ import { useEffect, useState } from "react";
 export default function TarjetaDetalles({ detallesRuta }) {
   const { id } = useParams();
   const { authorization } = useAuthContext();
-  const [grupeta,setGrupeta] = useState([]);
+  const [grupeta, setGrupeta] = useState([]);
 
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const response = await fetch(`http://localhost:3000/rutas/grupeta/${id}`);
-      const data = await response.json();
-      setGrupeta(data);
-    } catch(error) {
-      console.log(error);
-    }
-  };
-  fetchData()
-},[])
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:3000/rutas/grupeta/${id}`
+        );
+        const data = await response.json();
+        setGrupeta(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   function unirseRuta() {
     fetch(
@@ -99,13 +101,21 @@ useEffect(() => {
           </div>
         </div>
       </div>
-      <div className="container text-center mt-5">
+      <div className="container mt-5 text-center">
         <h3>Grupeta</h3>
-        {grupeta.map((participantes) => (
-          <p className="col">{participantes.apodo}</p>
-        ))}
-       
+        <div className="d-flex justify-content-center gap-5 ">
+          {grupeta.map((participantes) => (
+            <div className="">
+              <p className="">{participantes.apodo}</p>
+              <img
+                className="img-circle img-sm"
+                alt="Profile Picture"
+                src={`http://localhost:3000/${participantes.imagen}`}
+              />
+            </div>
+          ))}
         </div>
+      </div>
     </>
   );
 }
