@@ -103,7 +103,7 @@ export default function TarjetaDetalles({ detallesRuta }) {
       </div>
       <div className="container mt-5 text-center">
         <h3>Grupeta</h3>
-        <div className="d-flex justify-content-center gap-5 ">
+        <div className="d-flex justify-content-center gap-5">
           {grupeta.map((participantes) => (
             <div className="">
               <p className="">{participantes.apodo}</p>
