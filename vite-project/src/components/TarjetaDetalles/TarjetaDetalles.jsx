@@ -1,17 +1,36 @@
 import "./TarjetaDetalle.css";
 import { useParams } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext/AuthContext";
+import { useEffect, useState } from "react";
 export default function TarjetaDetalles({ detallesRuta }) {
   const { id } = useParams();
-   const {authorization} = useAuthContext()
+  const { authorization } = useAuthContext();
+  const [grupeta,setGrupeta] = useState([]);
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await fetch(`http://localhost:3000/rutas/grupeta/${id}`);
+      const data = await response.json();
+      setGrupeta(data);
+    } catch(error) {
+      console.log(error);
+    }
+  };
+  fetchData()
+},[])
+
   function unirseRuta() {
-    fetch(`http://localhost:3000/user/addUserRuta/${detallesRuta.id}/${authorization.id}`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(),
-    }).then((response) => {
+    fetch(
+      `http://localhost:3000/user/addUserRuta/${detallesRuta.id}/${authorization.id}`,
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(),
+      }
+    ).then((response) => {
       console.log(response.status);
       if (response.status === 400) {
         alert("error al recibir el body");
@@ -80,6 +99,13 @@ export default function TarjetaDetalles({ detallesRuta }) {
           </div>
         </div>
       </div>
+      <div className="container text-center mt-5">
+        <h3>Grupeta</h3>
+        {grupeta.map((participantes) => (
+          <p className="col">{participantes.apodo}</p>
+        ))}
+       
+        </div>
     </>
   );
 }
