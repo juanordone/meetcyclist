@@ -54,41 +54,42 @@ export default function TarjetaDetalles({ detallesRuta }) {
         className="container d-flex justify-content-around align-items-center"
         key={detallesRuta.id}
       >
-        <div className="col-6 mt-5">
+        <div className="col-6 mt-5 map-responsive">
           <div dangerouslySetInnerHTML={{ __html: `${detallesRuta.url}` }} />
         </div>
 
-        <div className="col-6 mt-5 text-center">
+        <div className="col-lg-6 col-sm-12 mt-5 text-center table-responsive">
+          <div className="table">
           <p className="fs-1 fw-bold  ciudad ">
             {" "}
             <i className="bi bi-geo-alt"></i> {detallesRuta.ciudad}
           </p>
-          <div className="d-flex justify-content-between">
-            <div className="fs-3 fw-bold text-start">
+          <div className="d-flex flex-column flex-sm-row justify-content-between">
+            <div className="fs-3 fw-bold text-start text-truncate">
               <p>
-                Distancia <i className="bi bi-bicycle ciudad"></i> :
+                Distancia <i className="bi bi-bicycle ciudad d-inline-block w-auto"></i> :
               </p>
               <p>
-                Fecha <i className="bi bi-calendar3 ciudad"></i> :
+                Fecha <i className="bi bi-calendar3 ciudad d-inline-block w-auto"></i> :
               </p>
               <p>
-                Nivel de la ruta <i className="bi bi-reception-3 ciudad"></i> :
+                Nivel de la ruta <i className="bi bi-reception-3 ciudad d-inline-block w-auto"></i> :
               </p>
               <p>
                 Velocidad media{" "}
-                <i className="bi bi-fast-forward-btn ciudad"></i> :
+                <i className="bi bi-fast-forward-btn ciudad d-inline-block w-auto"></i> :
               </p>
               <p>
-                Tipo de ruta <i className="bi bi-repeat ciudad"></i> :
+                Tipo de ruta <i className="bi bi-repeat ciudad d-inline-block w-auto"></i> :
               </p>
               <p>
-                Duración aprox. <i className="bi bi-clock ciudad"></i> :
+                Duración aprox. <i className="bi bi-clock ciudad d-inline-block w-auto"></i> :
               </p>
               <p>
-                Detalles <i className="bi bi-chat-left-dots ciudad"></i> :
+                Detalles <i className="bi bi-chat-left-dots ciudad d-inline-block w-auto"></i> :
               </p>
             </div>
-            <div className="fs-3 text-end">
+            <div className="fs-3 text-end text-truncate">
               <p>{detallesRuta.distancia}</p>
               <p>{detallesRuta.fecha}</p>
               <p>{detallesRuta.nivel}</p>
@@ -103,6 +104,7 @@ export default function TarjetaDetalles({ detallesRuta }) {
             <button type="button" className="botonunir" onClick={unirseRuta}>
               Unirse a ruta
             </button>
+          </div>
           </div>
         </div>
       </div>
