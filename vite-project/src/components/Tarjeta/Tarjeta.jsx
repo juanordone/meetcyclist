@@ -8,7 +8,7 @@ export default function Tarjeta({ ciudad, id, url , fecha}) {
         <div className="col-11 mb-4">
           <div className="card shadow-sm bordetarjeta p-1">
             <div
-              className="card-img d-flex justify-content-center "
+              className="card-img d-flex justify-content-center  " 
               dangerouslySetInnerHTML={{ __html: `${url}` }}
             />
             <div className="card-body">
