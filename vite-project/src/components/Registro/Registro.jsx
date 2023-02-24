@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuthContext } from "../../AuthContext/AuthContext";
 import "./Registro.css"
+import Swal from "sweetalert2"
 
 export default function Registro() {
   const [nuevoUsuario, setNuevoUsuario] = useState({
@@ -32,7 +33,7 @@ export default function Registro() {
       if (response.status === 400) {
         alert("error al recibir el body");
       } else if (response.status === 200) {
-        alert(`usuario ${nuevoUsuario.nombre} registrado correctamente`);
+        Swal.fire({position:"center", title:"Registrado con exito, logeate para empezar a rodar",confirmButtonColor:"rgb(251, 82, 0)"});
       } else if (response.status === 409) {
         alert("usuario ya registrado");
       }
