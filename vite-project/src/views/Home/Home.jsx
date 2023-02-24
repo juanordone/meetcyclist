@@ -43,7 +43,9 @@ export default function Home() {
   return (
     <>
     <div className="colorhome">
-    <div className="d-flex justify-content-center">
+      <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-lg-8 col-md-10">
       <BarraBuscador
         rutaABuscar={rutaABuscar}
         setRutaABuscar={setRutaABuscar}
@@ -51,8 +53,8 @@ export default function Home() {
       </div>
       <p className="text-uppercase fs-1 fw-semibold text-center mt-5 noruta ">{error}</p>
       
-      <div className="container d-flex flex-wrap gap-5 justify-content-center">
-        {rutas.map((ruta) => (
+      <div className="row  gap-5 justify-content-center">
+        {rutas.map((ruta) => (<div className="col-lg-4 col-md-6 col-sm-12">
           <Tarjeta
             key={ruta.id}
             ciudad={ruta.ciudad}
@@ -60,7 +62,10 @@ export default function Home() {
             id={ruta.id}
             fecha={ruta.fecha}
           />
+          </div>
         ))}
+      </div>
+      </div>
       </div>
       </div>
     </>
