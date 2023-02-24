@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuthContext } from "../../AuthContext/AuthContext";
-import "./Registro.css"
-import Swal from "sweetalert2"
+import "./Registro.css";
+import Swal from "sweetalert2";
 
 export default function Registro() {
   const [nuevoUsuario, setNuevoUsuario] = useState({
@@ -9,7 +9,7 @@ export default function Registro() {
     contraseña: "",
     nombre: "",
     apellidos: "",
-    apodo: ""
+    apodo: "",
   });
 
   function handleInput(e) {
@@ -33,12 +33,26 @@ export default function Registro() {
       if (response.status === 400) {
         alert("error al recibir el body");
       } else if (response.status === 200) {
-        Swal.fire({position:"center", title:"Registrado con exito, logeate para empezar a rodar",confirmButtonColor:"rgb(251, 82, 0)"});
+        Swal.fire({
+          position: "center",
+          title: "Registrado con exito, logeate para empezar a rodar",
+          confirmButtonColor: "rgb(251, 82, 0)",
+        });
       } else if (response.status === 409) {
-        alert("usuario ya registrado");
+        Swal.fire({
+          position: "center",
+          title: "Ya estas registrado",
+          confirmButtonColor: "rgb(251, 82, 0)",
+        });
       }
     });
-    setNuevoUsuario({ email: "", contraseña: "", nombre: "", apellidos: "", apodo: ""});
+    setNuevoUsuario({
+      email: "",
+      contraseña: "",
+      nombre: "",
+      apellidos: "",
+      apodo: "",
+    });
   }
   return (
     <>
@@ -99,7 +113,11 @@ export default function Registro() {
             />
           </div>
           <div className="form-group">
-            <input type="submit" className="btn btn-lg mt-5 col-6"  id="iniciosesion" />
+            <input
+              type="submit"
+              className="btn btn-lg mt-5 col-6"
+              id="iniciosesion"
+            />
           </div>
           <div className="form-check text-light mt-3">
             <input
@@ -108,9 +126,11 @@ export default function Registro() {
               value=""
               id="flexCheckDefault"
               required
-            
             />
-            <label className="form-check-label text-black fw-bolder fs-5" htmlFor="flexCheckDefault">
+            <label
+              className="form-check-label text-black fw-bolder fs-5"
+              htmlFor="flexCheckDefault"
+            >
               Acepto la politica de privacidad
             </label>
           </div>
