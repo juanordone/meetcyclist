@@ -4,6 +4,7 @@ import { FormularioEsquemaUsuario } from "./FormularioEsquemaUsuario";
 import { initialValues } from "./utils/formUsuario";
 import { useAuthContext } from "../../AuthContext/AuthContext";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function FormularioUsuario() {
   const {authorization} = useAuthContext()
@@ -20,7 +21,11 @@ export default function FormularioUsuario() {
       if(response.status === 400){
         alert("Error al recibir el body");
       }else if(response.status === 200){
-        alert(`usuario ${values.apodo} cambiado correctamente`)
+        Swal.fire({
+          position: "center",
+          title: "Actualizado correctamente",
+          confirmButtonColor: "rgb(251, 82, 0)",
+        });
       }else if (response.status === 409){
         alert("");
       }

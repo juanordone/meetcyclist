@@ -4,6 +4,7 @@ import { useAuthContext } from "../../AuthContext/AuthContext";
 import { FormularioEsquema } from "./FormularioEsquema";
 import { initialValues } from "./utils/form";
 import "./Formulario.css"
+import Swal from "sweetalert2";
 
 export default function Formulario() {
   const { authorization } = useAuthContext();
@@ -20,7 +21,11 @@ export default function Formulario() {
       if (response.status === 400) {
         alert("error al recibir el body");
       } else if (response.status === 200) {
-        alert(`ruta ${values.ciudad} registrada correctamente`);
+        Swal.fire({
+          position: "center",
+          title: "Ruta registrada con exito",
+          confirmButtonColor: "rgb(251, 82, 0)",
+        });
       } else if (response.status === 409) {
         alert("");
       }

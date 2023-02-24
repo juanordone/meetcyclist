@@ -2,6 +2,7 @@ import "./TarjetaDetalle.css";
 import { useParams } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext/AuthContext";
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 export default function TarjetaDetalles({ detallesRuta }) {
   const { id } = useParams();
   const { authorization } = useAuthContext();
@@ -37,7 +38,11 @@ export default function TarjetaDetalles({ detallesRuta }) {
       if (response.status === 400) {
         alert("error al recibir el body");
       } else if (response.status === 200) {
-        alert("te ha unido a la ruta");
+        Swal.fire({
+          position: "center",
+          title: "Te has unido a la ruta, a pedalear",
+          confirmButtonColor: "rgb(251, 82, 0)",
+        });
       } else if (response.status === 409) {
         alert("ya estas en la ruta");
       }

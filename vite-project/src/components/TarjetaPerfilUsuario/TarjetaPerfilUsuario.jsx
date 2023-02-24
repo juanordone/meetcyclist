@@ -1,5 +1,6 @@
 import { Formik, useFormik } from "formik";
 import { TarjetaEsquema } from "./TarjetaEsquema";
+import Swal from "sweetalert2";
 
 import "./TarjetaPerfilUsuario.css";
 
@@ -16,7 +17,11 @@ export default function TarjetaPerfilUsuario({ detallesUsuario }) {
       if (response.status === 400) {
         alert("error al recibir el body");
       } else if (response.status === 200) {
-        alert("imagen cargada correctamente");
+        Swal.fire({
+          position: "center",
+          title: "Imagen subida correctamente",
+          confirmButtonColor: "rgb(251, 82, 0)",
+        });
       } else if (response.status === 409) {
         alert("");
       }
