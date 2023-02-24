@@ -46,6 +46,8 @@ export default function DetallesUsuario() {
             key={rutaUsuario.id}
             url={rutaUsuario.url}
             ciudad={rutaUsuario.ciudad}
+            id={rutaUsuario.id}
+            fecha={rutaUsuario.fecha}
           />
         ))}
       </div>
