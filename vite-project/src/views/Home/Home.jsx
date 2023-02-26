@@ -45,7 +45,7 @@ export default function Home() {
     <div className="colorhome">
       <div className="container">
     <div className="row justify-content-center">
-      <div className="col-lg-8 col-md-10">
+      <div className="col-lg-8 col-md-6 col-sm-12">
       <BarraBuscador
         rutaABuscar={rutaABuscar}
         setRutaABuscar={setRutaABuscar}
@@ -54,7 +54,7 @@ export default function Home() {
       <p className="text-uppercase fs-1 fw-semibold text-center mt-5 noruta ">{error}</p>
       
       <div className="row  gap-5 justify-content-center">
-        {rutas.map((ruta) => (<div className="col-lg-4 col-md-6 col-sm-12">
+        {rutas.map((ruta) => (<div className="col-lg-5 col-md-6 col-sm-12">
           <Tarjeta
             key={ruta.id}
             ciudad={ruta.ciudad}

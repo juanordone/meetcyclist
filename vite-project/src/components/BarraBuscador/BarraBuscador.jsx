@@ -1,8 +1,8 @@
 export default function BarraBuscador({rutaABuscar, setRutaABuscar}) {
     return(
         <input
-        className="form-control mt-5 ms-5 "
-        style={{ width: "50rem" }}
+        className="form-control mt-5  "
+       
         type="text"
         placeholder="Buscar ruta "
         aria-label="Buscar"
