@@ -9,17 +9,19 @@ export default function SubirRuta() {
       <div className="imgFondoRuta">
         <div className="container text-center  ">
           <div className="row align-items-center">
-            <div className="col-6 mt-5">
+            <div className="col-md-6 mt-5 mb-5 mb-md-0">
               <Formulario />
             </div>
-            <div className="col-6">
+            <div className="col-md-6">
+              <div className="embed-responsive embed-responsive-16by9">
               <ReactPlayer
-                className="react-player "
+                className=" embed-responsive-item ReactPlayer"
                 url="../../../videosubirruta.mp4"
                 controls
                 playing
                 
               />
+              </div>
             </div>
           </div>
         </div>
