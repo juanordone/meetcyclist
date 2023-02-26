@@ -50,68 +50,88 @@ export default function TarjetaDetalles({ detallesRuta }) {
   }
   return (
     <>
-      <div
-        className="container d-flex justify-content-around align-items-center"
-        key={detallesRuta.id}
-      >
-        <div className="col-6 mt-5 map-responsive">
-          <div dangerouslySetInnerHTML={{ __html: `${detallesRuta.url}` }} />
-        </div>
-
-        <div className="col-lg-6 col-sm-12 mt-5 text-center table-responsive">
-          <div className="table">
-          <p className="fs-1 fw-bold  ciudad ">
-            {" "}
-            <i className="bi bi-geo-alt"></i> {detallesRuta.ciudad}
-          </p>
-          <div className="d-flex flex-column flex-sm-row justify-content-between">
-            <div className="fs-3 fw-bold text-start text-truncate">
-              <p>
-                Distancia <i className="bi bi-bicycle ciudad d-inline-block w-auto"></i> :
-              </p>
-              <p>
-                Fecha <i className="bi bi-calendar3 ciudad d-inline-block w-auto"></i> :
-              </p>
-              <p>
-                Nivel de la ruta <i className="bi bi-reception-3 ciudad d-inline-block w-auto"></i> :
-              </p>
-              <p>
-                Velocidad media{" "}
-                <i className="bi bi-fast-forward-btn ciudad d-inline-block w-auto"></i> :
-              </p>
-              <p>
-                Tipo de ruta <i className="bi bi-repeat ciudad d-inline-block w-auto"></i> :
-              </p>
-              <p>
-                Duración aprox. <i className="bi bi-clock ciudad d-inline-block w-auto"></i> :
-              </p>
-              <p>
-                Detalles <i className="bi bi-chat-left-dots ciudad d-inline-block w-auto"></i> :
-              </p>
-            </div>
-            <div className="fs-3 text-end text-truncate">
-              <p>{detallesRuta.distancia}</p>
-              <p>{detallesRuta.fecha}</p>
-              <p>{detallesRuta.nivel}</p>
-              <p>{detallesRuta.velocidad}</p>
-              <p>{detallesRuta.tipo}</p>
-              <p>{detallesRuta.duracion}</p>
-              <p>{detallesRuta.detalles}</p>
-            </div>
+      <div className="container-fluid" key={detallesRuta.id}>
+        <div className="row justify-content-center align-items-center">
+          <div className="col-lg-5 col-md-12 col-sm-12 ">
+            <div dangerouslySetInnerHTML={{ __html: `${detallesRuta.url}` }} />
           </div>
 
-          <div className="d-grid gap-2 p-3">
-            <button type="button" className="botonunir" onClick={unirseRuta}>
-              Unirse a ruta
-            </button>
-          </div>
+          <div className="col-lg-6 col-md-12 col-sm-12 mt-5 text-center">
+            <div className="table-responsive">
+              <table className="table">
+                <tbody>
+                  <tr className="">
+                    <th className="fs-1 fw-bold ciudad border-0">
+                      <i className="bi bi-geo-alt"></i> {detallesRuta.ciudad}
+                    </th>
+                  </tr>
+                  <tr>
+                    <td className="fs-3 fw-bold text-start text-truncate">
+                      <p>
+                        Distancia{" "}
+                        <i className="bi bi-bicycle ciudad d-inline-block w-auto"></i>{" "}
+                        :
+                      </p>
+                      <p>
+                        Fecha{" "}
+                        <i className="bi bi-calendar3 ciudad d-inline-block w-auto"></i>{" "}
+                        :
+                      </p>
+                      <p>
+                        Nivel de la ruta{" "}
+                        <i className="bi bi-reception-3 ciudad d-inline-block w-auto"></i>{" "}
+                        :
+                      </p>
+                      <p>
+                        Velocidad media{" "}
+                        <i className="bi bi-fast-forward-btn ciudad d-inline-block w-auto"></i>{" "}
+                        :
+                      </p>
+                      <p>
+                        Tipo de ruta{" "}
+                        <i className="bi bi-repeat ciudad d-inline-block w-auto"></i>{" "}
+                        :
+                      </p>
+                      <p>
+                        Duración aprox.{" "}
+                        <i className="bi bi-clock ciudad d-inline-block w-auto"></i>{" "}
+                        :
+                      </p>
+                      <p>
+                        Detalles{" "}
+                        <i className="bi bi-chat-left-dots ciudad d-inline-block w-auto"></i>{" "}
+                        :
+                      </p>
+                    </td>
+                    <td className="fs-3 text-end text-truncate">
+                      <p>{detallesRuta.distancia}</p>
+                      <p>{detallesRuta.fecha}</p>
+                      <p>{detallesRuta.nivel}</p>
+                      <p>{detallesRuta.velocidad}</p>
+                      <p>{detallesRuta.tipo}</p>
+                      <p>{detallesRuta.duracion}</p>
+                      <p>{detallesRuta.detalles}</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className="d-grid gap-2 p-3">
+                <button
+                  type="button"
+                  className="botonunir"
+                  onClick={unirseRuta}
+                >
+                  Unirse a ruta
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div className="container mt-5 text-center">
         <h3>Grupeta</h3>
         <div className="d-flex justify-content-center gap-5">
-          {grupeta.map((participantes,index) => (
+          {grupeta.map((participantes, index) => (
             <div className="" key={index}>
               <p className="">{participantes.apodo}</p>
               <img

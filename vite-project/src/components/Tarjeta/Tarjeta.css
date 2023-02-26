@@ -16,15 +16,6 @@
   color: rgb(255, 255, 255);
 }
 
-@media (max-width: 576px) {
-  .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 
-  .card-img {
-    width: 100%;
-  }
-}
 
 
