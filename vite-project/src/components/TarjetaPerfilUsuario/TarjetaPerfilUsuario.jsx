@@ -78,7 +78,8 @@ export default function TarjetaPerfilUsuario({ detallesUsuario }) {
             </form>
           </div>
         </div>
-        <div>
+
+        <div className="row ms-3">
           <h6 className="ps-3"> Nombre: {detallesUsuario.nombre} </h6>
           <h6 className="ps-3">Apellidos: {detallesUsuario.apellidos}</h6>
           <h6 className="ps-3">Email: {detallesUsuario.email}</h6>
