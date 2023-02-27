@@ -5,7 +5,7 @@ export default function Footer() {
     <>
       <footer className="text-center  ">
         <div className="container pt-4">
-          <h3 className="subeRuta">Meet Cyclist</h3>
+          <h3 className="subeRuta">Meet Cyclist <i className="bi bi-r-circle fs-6"></i></h3>
           <div className="mb-4">
             <a
               className="btn btn-link btn-floating btn-lg text-dark m-1"
