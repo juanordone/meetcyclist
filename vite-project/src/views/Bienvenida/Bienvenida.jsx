@@ -16,11 +16,13 @@ export default function Bienvenida() {
       No salgas nunca más solo
     </h1>
     <div className="rounded-4 position-absolute top-0 end-0 mb-3 me-5 mt-5 d-flex justify-content-end">
+      <div className="position-relative">
       {!authorization?.email ? (
         <Boton to="iniciosesion" campo="iniciar sesion" />
       ) : (
         <Boton to="home" campo="iniciar sesion" />
       )}
+      </div>
     </div>
   </div>
 </div>
@@ -45,7 +47,7 @@ export default function Bienvenida() {
               <Boton to="/iniciosesion" campo="registro" />
             </div>
           </div>
-          <div className="col-12 col-md-4">
+          <div className="col-12 col-md-4 mt-5">
             <img
               src="../../../bienvenida2.jpg"
               className="img-fluid"
