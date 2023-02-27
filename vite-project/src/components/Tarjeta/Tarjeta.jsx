@@ -4,7 +4,7 @@ import "./Tarjeta.css"
 export default function Tarjeta({ ciudad, id, url , fecha}) {
   return (
     <>
-      <div className=" mt-5">
+      <div className=" mt-5 mb-5">
         <div className=" ">
           <div className="card shadow-sm bordetarjeta p-1">
             <div

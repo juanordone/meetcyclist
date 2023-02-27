@@ -3,7 +3,7 @@ import "./Footer.css"
 export default function Footer() {
   return (
     <>
-      <footer className="text-center mt-5 ">
+      <footer className="text-center  ">
         <div className="container pt-4">
           <h3 className="subeRuta">Meet Cyclist</h3>
           <div className="mb-4">
