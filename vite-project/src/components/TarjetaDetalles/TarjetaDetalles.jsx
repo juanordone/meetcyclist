@@ -48,6 +48,28 @@ export default function TarjetaDetalles({ detallesRuta }) {
       }
     });
   }
+
+  function borrarseRuta() {
+    fetch(`http://localhost:3000/user/${detallesRuta.id}/${authorization.id}`,{
+      method: "DELETE",
+      headers:{"content-type": "application/json"},
+      body: JSON.stringify()
+    }
+    ).then((response) => {
+      console.log(response.status);
+      if (response.status === 400) {
+        alert("error al recibir el body");
+      } else if (response.status === 200) {
+        Swal.fire({
+          position: "center",
+          title: "Te has borrado de la grupeta correctamente",
+          confirmButtonColor: "rgb(251, 82, 0)",
+        });
+      } else if (response.status === 409) {
+        alert("ya estas en la ruta");
+      }
+    });
+  }
   return (
     <>
       <div className="container-fluid" key={detallesRuta.id}>
@@ -126,7 +148,7 @@ export default function TarjetaDetalles({ detallesRuta }) {
                 >
                   Unirse a ruta
                 </button>
-                <button type="button" className="botonunir mt-4">
+                <button type="button" className="botonunir mt-4" onClick={borrarseRuta}>
                   Salir de la ruta
                 </button>
               </div>
