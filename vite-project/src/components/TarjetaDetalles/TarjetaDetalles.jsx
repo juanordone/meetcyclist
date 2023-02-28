@@ -53,7 +53,10 @@ export default function TarjetaDetalles({ detallesRuta }) {
       <div className="container-fluid" key={detallesRuta.id}>
         <div className="row justify-content-center align-items-center">
           <div className="col-lg-5 col-md-12 col-sm-12 ">
-            <div className="card-img-top d-flex justify-content-center" dangerouslySetInnerHTML={{ __html: `${detallesRuta.url}` }} />
+            <div
+              className="card-img-top d-flex justify-content-center"
+              dangerouslySetInnerHTML={{ __html: `${detallesRuta.url}` }}
+            />
           </div>
 
           <div className="col-lg-6 col-md-12 col-sm-12 mt-5 text-center">
@@ -122,6 +125,9 @@ export default function TarjetaDetalles({ detallesRuta }) {
                   onClick={unirseRuta}
                 >
                   Unirse a ruta
+                </button>
+                <button type="button" className="botonunir mt-4">
+                  Salir de la ruta
                 </button>
               </div>
             </div>
