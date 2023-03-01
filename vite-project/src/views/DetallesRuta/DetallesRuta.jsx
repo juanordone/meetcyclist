@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Comentarios from "../../components/Comentarios/Comentarios";
 import TarjertaComentario from "../../components/TarjetaComentario/TarjetaComentario";
+import Clima from "../../components/Clima/Clima";
 
 export default function DetallesRuta({}) {
   const { id } = useParams();
@@ -29,19 +30,23 @@ export default function DetallesRuta({}) {
 
   return (
     <>
-    <div className="colorhome">
-      <TarjetaDetalles detallesRuta={detallesRuta} />
-      <Comentarios />
-      <div>
-        {comentariosRuta.map((comentarioUsuario) => (
-          <TarjertaComentario
-            key={comentarioUsuario.id}
-            Comentarios={comentarioUsuario.comentario}
-            apodo={comentarioUsuario.apodo}
-            imagen={comentarioUsuario.imagen}
-          />
-        ))}
-      </div>
+      <div className="colorhome">
+        <TarjetaDetalles detallesRuta={detallesRuta} />
+        <div className="d-flex justify-content-center mt-5">
+        <Clima/>
+        </div>
+        <Comentarios />
+
+        <div>
+          {comentariosRuta.map((comentarioUsuario) => (
+            <TarjertaComentario
+              key={comentarioUsuario.id}
+              Comentarios={comentarioUsuario.comentario}
+              apodo={comentarioUsuario.apodo}
+              imagen={comentarioUsuario.imagen}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

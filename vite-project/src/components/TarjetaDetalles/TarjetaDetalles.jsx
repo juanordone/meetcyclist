@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext/AuthContext";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+
 export default function TarjetaDetalles({ detallesRuta }) {
   const { id } = useParams();
   const { authorization } = useAuthContext();
@@ -50,12 +51,11 @@ export default function TarjetaDetalles({ detallesRuta }) {
   }
 
   function borrarseRuta() {
-    fetch(`http://localhost:3000/user/${detallesRuta.id}/${authorization.id}`,{
+    fetch(`http://localhost:3000/user/${detallesRuta.id}/${authorization.id}`, {
       method: "DELETE",
-      headers:{"content-type": "application/json"},
-      body: JSON.stringify()
-    }
-    ).then((response) => {
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(),
+    }).then((response) => {
       console.log(response.status);
       if (response.status === 400) {
         alert("error al recibir el body");
@@ -148,7 +148,11 @@ export default function TarjetaDetalles({ detallesRuta }) {
                 >
                   Unirse a ruta
                 </button>
-                <button type="button" className="botonunir mt-4" onClick={borrarseRuta}>
+                <button
+                  type="button"
+                  className="botonunir mt-4"
+                  onClick={borrarseRuta}
+                >
                   Salir de la ruta
                 </button>
               </div>
