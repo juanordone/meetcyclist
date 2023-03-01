@@ -30,7 +30,7 @@ export default function Clima() {
 
   let form = (
     <form onSubmit={handleSubmit}>
-      <input
+      <input 
         type="search"
         placeholder="Introduce ciudad..."
         onChange={updateCity}
@@ -42,7 +42,7 @@ export default function Clima() {
   if (loaded) {
     return (
       <>
-        <div className="card border-0 border-primary ">
+        <div className="card border-0 shadow-sm ">
           {form}
           <ul className="list-group">
             <li className="list-group-item">
