@@ -32,7 +32,9 @@ export default function DetallesRuta({}) {
     <>
       <div className="colorhome">
         <TarjetaDetalles detallesRuta={detallesRuta} />
-        <div className="d-flex justify-content-center mt-5">
+       
+        <div className="d-flex flex-column align-items-center   mt-5">
+        <h4 className="">Consulta el tiempo de tu ruta</h4>
         <Clima/>
         </div>
         <Comentarios />

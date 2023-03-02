@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Clima.css"
 
 export default function Clima() {
   const [city, setCity] = useState("");
@@ -31,11 +32,12 @@ export default function Clima() {
   let form = (
     <form onSubmit={handleSubmit}>
       <input 
+        className="clima"
         type="search"
         placeholder="Introduce ciudad..."
         onChange={updateCity}
       />
-      <button type="Submit">Buscar</button>
+      <button className="boton-clima ms-3" type="Submit">Buscar</button>
     </form>
   );
 
