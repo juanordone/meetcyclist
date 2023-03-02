@@ -15,5 +15,5 @@
 .clima{
     padding: 8px;
     border-radius: 8px;
-    border-color:rgb(251, 82, 0) ;
+    border:2px solid rgb(251, 82, 0) ;
 }
