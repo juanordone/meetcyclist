@@ -150,7 +150,7 @@ export default function TarjetaDetalles({ detallesRuta }) {
                 </button>
                 <button
                   type="button"
-                  className="botonunir mt-4"
+                  className="botonsalir mt-4"
                   onClick={borrarseRuta}
                 >
                   Salir de la ruta

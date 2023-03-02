@@ -16,6 +16,18 @@
     color:  rgb(255, 255, 255);
 }
 
+.botonsalir{
+    border-color: rgb(251, 82, 0);
+    
+    padding: 16px;
+    border-radius: 8px;
+    background-color:rgb(255, 255, 255) ;
+    transition: 0.3s;
+}
+.botonsalir:hover{
+    background-color:rgb(251, 82, 0) ;
+}
+
 
   
 
