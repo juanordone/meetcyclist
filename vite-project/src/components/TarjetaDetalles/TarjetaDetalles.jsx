@@ -81,12 +81,12 @@ export default function TarjetaDetalles({ detallesRuta }) {
             />
           </div>
 
-          <div className="col-lg-6 col-md-12 col-sm-12 mt-5 text-center">
+          <div className="col-lg-7 col-md-12 col-sm-12 mt-5 text-center">
             <div className="table-responsive">
               <table className="table">
                 <tbody>
                   <tr className="">
-                    <th className="fs-1 fw-bold ciudad border-0">
+                    <th className="fs-1 fw-bold ciudad border-0 ">
                       <i className="bi bi-geo-alt"></i> {detallesRuta.ciudad}
                     </th>
                   </tr>
