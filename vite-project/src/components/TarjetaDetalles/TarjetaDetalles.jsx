@@ -50,25 +50,27 @@ export default function TarjetaDetalles({ detallesRuta }) {
     }
   }
 
-  function borrarseRuta() {
-    fetch(`http://localhost:3000/user/${detallesRuta.id}/${authorization.id}`, {
+  async function borrarseRuta() {
+   const response = await fetch(`http://localhost:3000/user/${detallesRuta.id}/${authorization.id}`, {
       method: "DELETE",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(),
-    }).then((response) => {
-      console.log(response.status);
-      if (response.status === 400) {
-        alert("error al recibir el body");
-      } else if (response.status === 200) {
-        Swal.fire({
-          position: "center",
-          title: "Te has borrado de la grupeta correctamente",
-          confirmButtonColor: "rgb(251, 82, 0)",
-        });
-      } else if (response.status === 409) {
-        alert("ya estas en la ruta");
-      }
-    });
+    }
+    );
+    if (response.status === 400) {
+      alert("error al recibir el body");
+    } else if (response.status === 200) {
+      const grupo = await response.json();
+
+      setGrupeta(grupo);
+      Swal.fire({
+        position: "center",
+        title: "Te has borrado correctamente",
+        confirmButtonColor: "rgb(251, 82, 0)",
+      });
+    } else if (response.status === 409) {
+      alert("ya estas en la ruta");
+    }
   }
   return (
     <>
