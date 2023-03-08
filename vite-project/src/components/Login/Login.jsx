@@ -24,7 +24,7 @@ export default function Login() {
   return (
     <>
       <div className="  mt-5 me-5 ">
-        <h3 className="titulo">Iniciar Sesion</h3>
+        <h3 className="titulo">Iniciar Sesión</h3>
         <form onSubmit={(e) => login(e, user)}>
           <div className="form-group ">
             <input
@@ -48,7 +48,7 @@ export default function Login() {
           </div>
           <div className="form-group ">
             <button id="iniciosesion" type="submit" className="btn btn-lg mt-5 col-6 ">
-              Login
+              Iniciar sesión 
             </button>
             
           </div>

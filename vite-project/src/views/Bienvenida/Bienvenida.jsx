@@ -42,7 +42,7 @@ export default function Bienvenida() {
               divertida. Olvídate de salir solo.
             </p>
             <div className="mt-5  ms-md-5 d-grid gap-2 col-8 col-md-6 mx-auto ">
-              <Boton to="iniciosesion" campo="iniciar sesion" />
+              <Boton to="iniciosesion" campo="iniciar sesión" />
 
               <Boton to="/iniciosesion" campo="registro" />
             </div>
