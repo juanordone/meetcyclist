@@ -24,30 +24,30 @@ export default function TarjetaDetalles({ detallesRuta }) {
     fetchData();
   }, []);
 
-  function unirseRuta() {
-    fetch(
+  async function unirseRuta() {
+    const response = await fetch(
       `http://localhost:3000/user/addUserRuta/${detallesRuta.id}/${authorization.id}`,
       {
         method: "POST",
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(),
       }
-    ).then((response) => {
-      console.log(response.status);
-      if (response.status === 400) {
-        alert("error al recibir el body");
-      } else if (response.status === 200) {
-        Swal.fire({
-          position: "center",
-          title: "Te has unido a la ruta, a pedalear",
-          confirmButtonColor: "rgb(251, 82, 0)",
-        });
-      } else if (response.status === 409) {
-        alert("ya estas en la ruta");
-      }
-    });
+    );
+    if (response.status === 400) {
+      alert("error al recibir el body");
+    } else if (response.status === 200) {
+      const grupo = await response.json();
+
+      setGrupeta(grupo);
+      Swal.fire({
+        position: "center",
+        title: "Te has unido a la ruta, a pedalear",
+        confirmButtonColor: "rgb(251, 82, 0)",
+      });
+    } else if (response.status === 409) {
+      alert("ya estas en la ruta");
+    }
   }
 
   function borrarseRuta() {
