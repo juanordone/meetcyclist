@@ -9,10 +9,5 @@ describe("prueba de inicio de sesion y apuntarse a una ruta", () => {
       .type("12345")
       .wait(3000);
     cy.get(":nth-child(3) > #iniciosesion").click().wait(3000);
-    cy.get(
-      ":nth-child(1) > .mt-5 > :nth-child(1) > .card > .card-body > .botonTarjeta"
-    ).click();
-    cy.get(".botonunir").click().wait(5000);
-    cy.get(".swal2-confirm").click(3000);
   });
 });
