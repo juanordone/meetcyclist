@@ -8,11 +8,13 @@ import { AuthContextProvider } from "./AuthContext/AuthContext";
 import SubirRuta from "./views/SubirRuta/SubirRuta";
 import DetallesRuta from "./views/DetallesRuta/DetallesRuta";
 import DetallesUsuario from "./views/DetallesaUsuario/DetallesUsuario";
+import ScrollToTop from "../ScrollToTop";
 
 function App() {
   return (
     <AuthContextProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="iniciosesion" element={<InicioSesion />} />
           <Route index element={<Bienvenida />} />
