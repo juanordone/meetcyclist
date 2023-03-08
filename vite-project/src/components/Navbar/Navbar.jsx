@@ -84,7 +84,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link className="dropdown-item" onClick={logout} to={"/"}>
-                    Salir
+                    Salir  <i class="bi bi-box-arrow-right"></i>
                   </Link>
                 </li>
               </ul>
