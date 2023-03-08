@@ -54,6 +54,10 @@ export default function Home() {
       <p className="text-uppercase fs-1 fw-semibold text-center mt-5 noruta ">{error}</p>
       
       <div className="row  gap-5 justify-content-center">
+      <div>
+        <h2 className="text-center fs-1  noruta">Rutas disponibles</h2>
+      </div>
+        
         {rutas.map((ruta) => (<div className="col-lg-5 col-md-6 col-sm-12">
           <Tarjeta
             key={ruta.id}

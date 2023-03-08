@@ -16,7 +16,7 @@ export default function SubirRuta() {
               <div className="embed-responsive embed-responsive-16by9">
               <ReactPlayer
                 className=" embed-responsive-item ReactPlayer"
-                url="../../../videosubirruta.mp4"
+                url="../../../videosubirruta2.mp4"
                 controls
                 playing
                 
