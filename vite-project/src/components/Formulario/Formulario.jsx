@@ -1,14 +1,20 @@
 import { useFormik } from "formik";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext/AuthContext";
 import { FormularioEsquema } from "./FormularioEsquema";
 import { initialValues } from "./utils/form";
+import {useEffect} from "react"
 import "./Formulario.css"
 import Swal from "sweetalert2";
 
 export default function Formulario() {
   const { authorization } = useAuthContext();
   const params = useParams();
+  const navigate = useNavigate();
+
+ 
+
+
   async function onSubmit(values, actions) {
     fetch(`http://localhost:3000/rutas/addRutas/${authorization.id} `, {
       method: "POST",
@@ -32,6 +38,7 @@ export default function Formulario() {
     });
     console.log(values);
     console.log(actions);
+    navigate("/home")
     actions.resetForm();
   }
 
