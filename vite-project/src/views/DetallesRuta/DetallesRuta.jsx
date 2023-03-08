@@ -37,7 +37,7 @@ export default function DetallesRuta({}) {
         <h4 className="">Consulta el tiempo de tu ruta</h4>
         <Clima/>
         </div>
-        <Comentarios />
+        <Comentarios setComentariosRuta={setComentariosRuta} />
 
         <div>
           {comentariosRuta.map((comentarioUsuario) => (

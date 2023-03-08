@@ -5,21 +5,23 @@ import { EsquemaComentarios } from "./EsquemaComentarios";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
-export default function Comentarios() {
+export default function Comentarios( {setComentariosRuta}) {
   const {id} = useParams()
   const {authorization} = useAuthContext()
   async function onSubmit(values,actions) {
-    fetch(`http://localhost:3000/comentario/addcomentario/${id}/${authorization.id}`, {
+  const response = await fetch(`http://localhost:3000/comentario/addcomentario/${id}/${authorization.id}`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify( values ),
-    }).then((response)=> {
-      console.log(values);
+    })
       if(response.status === 400){
         alert("Error al recibir el body");
       }else if(response.status === 200){
+        console.log(response)
+        const comentarios= await response.json();
+        setComentariosRuta(comentarios)
         Swal.fire({
           position: "center",
           title: "Comentario añadido con exito",
@@ -28,7 +30,7 @@ export default function Comentarios() {
       }else if (response.status === 409){
         alert("");
       }
-    });
+    
     console.log(values);
     console.log(actions);
     actions.resetForm();
