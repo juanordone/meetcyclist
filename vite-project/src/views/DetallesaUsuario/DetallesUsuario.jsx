@@ -42,7 +42,7 @@ export default function DetallesUsuario() {
           </div>
           <div className=" d-flex flex-wrap justify-content-center gap-5">
             {rutasUsuario.map((rutaUsuario) => (
-              <div className="col-sm-6 col-md-5 mb-3 ">
+              <div key={rutaUsuario.id} className="col-sm-6 col-md-5 mb-3 ">
                 <Tarjeta
                   setDetallesUsuario={setDetallesUsuario}
                   key={rutaUsuario.id}
