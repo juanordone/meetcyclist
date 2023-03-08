@@ -4,28 +4,35 @@ import Swal from "sweetalert2";
 
 import "./TarjetaPerfilUsuario.css";
 
-export default function TarjetaPerfilUsuario({ detallesUsuario }) {
+export default function TarjetaPerfilUsuario({
+  detallesUsuario,
+  setDetallesUsuario,
+}) {
   async function onSubmit(values, actions) {
     let formdata = new FormData();
     formdata.append("file", values.imagen);
     console.log(values.imagen);
-    fetch(`http://localhost:3000/user/imagen/${detallesUsuario.id}`, {
-      method: "POST",
-      body: formdata,
-    }).then((response) => {
-      console.log(response.status);
-      if (response.status === 400) {
-        alert("error al recibir el body");
-      } else if (response.status === 200) {
-        Swal.fire({
-          position: "center",
-          title: "Imagen subida correctamente",
-          confirmButtonColor: "rgb(251, 82, 0)",
-        });
-      } else if (response.status === 409) {
-        alert("");
+    const response = await fetch(
+      `http://localhost:3000/user/imagen/${detallesUsuario.id}`,
+      {
+        method: "POST",
+        body: formdata,
       }
-    });
+    );
+    if (response.status === 400) {
+      alert("error al recibir el body");
+    } else if (response.status === 200) {
+      const detalles = await response.json();
+      setDetallesUsuario(detalles);
+      Swal.fire({
+        position: "center",
+        title: "Imagen subida correctamente",
+        confirmButtonColor: "rgb(251, 82, 0)",
+      });
+    } else if (response.status === 409) {
+      alert("");
+    }
+
     console.log(values);
     console.log(actions);
     actions.resetForm();

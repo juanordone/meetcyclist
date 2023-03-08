@@ -37,13 +37,14 @@ export default function DetallesUsuario() {
               <TarjetaPerfilUsuario detallesUsuario={detallesUsuario} />
             </div>
             <div className="col-sm-12 col-md-5">
-              <FormularioUsuario />
+              <FormularioUsuario setDetallesUsuario={setDetallesUsuario} />
             </div>
           </div>
           <div className=" d-flex flex-wrap justify-content-center gap-5">
             {rutasUsuario.map((rutaUsuario) => (
               <div className="col-sm-6 col-md-5 mb-3 ">
                 <Tarjeta
+                  setDetallesUsuario={setDetallesUsuario}
                   key={rutaUsuario.id}
                   url={rutaUsuario.url}
                   ciudad={rutaUsuario.ciudad}
