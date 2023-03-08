@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { useAuthContext } from "../../AuthContext/AuthContext";
 import { EsquemaComentarios } from "./EsquemaComentarios";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function Comentarios() {
   const {id} = useParams()
@@ -19,7 +20,11 @@ export default function Comentarios() {
       if(response.status === 400){
         alert("Error al recibir el body");
       }else if(response.status === 200){
-        alert(`comentario ${values.comentario} registrado correctamente`)
+        Swal.fire({
+          position: "center",
+          title: "Comentario añadido con exito",
+          confirmButtonColor: "rgb(251, 82, 0)",
+        });
       }else if (response.status === 409){
         alert("");
       }
